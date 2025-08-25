@@ -5,7 +5,10 @@ import { z } from "zod";
 const contactFormSchema = z.object({
   name: z.string().min(1, "Name is required").max(100, "Name is too long"),
   email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters long").max(1000, "Message is too long")
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters long")
+    .max(1000, "Message is too long"),
 });
 
 export interface ContactFormData {
@@ -23,12 +26,12 @@ export const handleContact: RequestHandler = async (req, res) => {
   try {
     // Validate the request body
     const validationResult = contactFormSchema.safeParse(req.body);
-    
+
     if (!validationResult.success) {
       return res.status(400).json({
         success: false,
         message: "Invalid form data",
-        errors: validationResult.error.errors
+        errors: validationResult.error.errors,
       });
     }
 
@@ -39,18 +42,18 @@ export const handleContact: RequestHandler = async (req, res) => {
     // 2. Send email notification
     // 3. Add to CRM system
     // 4. Log the contact attempt
-    
+
     // For now, we'll just log the contact attempt and simulate success
     console.log("Contact form submission:", {
       name,
       email,
       message,
       timestamp: new Date().toISOString(),
-      ip: req.ip
+      ip: req.ip,
     });
 
     // In a real implementation, you might want to:
-    
+
     // Send email notification (using nodemailer, sendgrid, etc.)
     // await sendEmailNotification({
     //   to: 'info@dumbpotato.com',
@@ -75,17 +78,18 @@ export const handleContact: RequestHandler = async (req, res) => {
 
     const response: ContactResponse = {
       success: true,
-      message: "Thank you for your message! We'll get back to you within 24 hours."
+      message:
+        "Thank you for your message! We'll get back to you within 24 hours.",
     };
 
     res.status(200).json(response);
-
   } catch (error) {
     console.error("Error handling contact form submission:", error);
-    
+
     const response: ContactResponse = {
       success: false,
-      message: "Sorry, something went wrong. Please try again later or contact us directly."
+      message:
+        "Sorry, something went wrong. Please try again later or contact us directly.",
     };
 
     res.status(500).json(response);
@@ -101,28 +105,30 @@ export const createContactRateLimit = () => {
   return (req: any, res: any, next: any) => {
     const ip = req.ip || req.connection.remoteAddress;
     const now = Date.now();
-    
+
     if (!submissions.has(ip)) {
       submissions.set(ip, []);
     }
-    
+
     const userSubmissions = submissions.get(ip)!;
-    
+
     // Remove submissions older than 1 hour
-    const recentSubmissions = userSubmissions.filter(time => now - time < HOUR_IN_MS);
+    const recentSubmissions = userSubmissions.filter(
+      (time) => now - time < HOUR_IN_MS,
+    );
     submissions.set(ip, recentSubmissions);
-    
+
     if (recentSubmissions.length >= MAX_SUBMISSIONS_PER_HOUR) {
       return res.status(429).json({
         success: false,
-        message: "Too many submissions. Please try again later."
+        message: "Too many submissions. Please try again later.",
       });
     }
-    
+
     // Add current submission
     recentSubmissions.push(now);
     submissions.set(ip, recentSubmissions);
-    
+
     next();
   };
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -114,21 +114,21 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors.dark.800');
+    background: theme("colors.dark.800");
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors.dark.600');
+    background: theme("colors.dark.600");
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors.orange.500');
+    background: theme("colors.orange.500");
   }
 
   /* Focus styles for accessibility */
   .focus-visible:focus {
-    outline: 2px solid theme('colors.orange.500');
+    outline: 2px solid theme("colors.orange.500");
     outline-offset: 2px;
   }
 
@@ -141,37 +141,37 @@
 
   /* Override any remaining light colors */
   .bg-cream-50 {
-    background-color: theme('colors.background') !important;
+    background-color: theme("colors.background") !important;
   }
 
   .bg-cream-100 {
-    background-color: theme('colors.muted') !important;
+    background-color: theme("colors.muted") !important;
   }
 
   .bg-cream-300 {
-    background-color: theme('colors.muted') !important;
+    background-color: theme("colors.muted") !important;
   }
 
   .text-dark-950 {
-    color: theme('colors.foreground') !important;
+    color: theme("colors.foreground") !important;
   }
 
   .text-dark-900 {
-    color: theme('colors.foreground') !important;
+    color: theme("colors.foreground") !important;
   }
 
   .border-dark-900 {
-    border-color: theme('colors.border') !important;
+    border-color: theme("colors.border") !important;
   }
 
   /* Text selection styling */
   ::selection {
-    background-color: theme('colors.orange.500');
-    color: theme('colors.cream.50');
+    background-color: theme("colors.orange.500");
+    color: theme("colors.cream.50");
   }
 
   ::-moz-selection {
-    background-color: theme('colors.orange.500');
-    color: theme('colors.cream.50');
+    background-color: theme("colors.orange.500");
+    color: theme("colors.cream.50");
   }
 }

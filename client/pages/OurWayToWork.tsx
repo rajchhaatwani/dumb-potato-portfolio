@@ -1,87 +1,127 @@
-import Navigation from '@/components/Navigation';
-import SEO from '@/components/SEO';
-import { Users, Lightbulb, Cog, Rocket, Heart, Shield } from 'lucide-react';
+import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
+import { Users, Lightbulb, Cog, Rocket, Heart, Shield } from "lucide-react";
 
 const OurWayToWork = () => {
   const principles = [
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Human-Centered Design",
-      description: "We put people at the center of everything we create. Every decision is made with the end user in mind, ensuring our solutions are intuitive, accessible, and meaningful."
+      description:
+        "We put people at the center of everything we create. Every decision is made with the end user in mind, ensuring our solutions are intuitive, accessible, and meaningful.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Privacy by Design",
-      description: "Privacy isn't an afterthought—it's built into every layer of our development process. We ensure user data is protected from the ground up."
+      description:
+        "Privacy isn't an afterthought—it's built into every layer of our development process. We ensure user data is protected from the ground up.",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Collaborative Partnership",
-      description: "We believe the best results come from true collaboration. We work as an extension of your team, not just an external vendor."
+      description:
+        "We believe the best results come from true collaboration. We work as an extension of your team, not just an external vendor.",
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Iterative Innovation",
-      description: "We embrace an iterative approach, constantly refining and improving based on feedback and new insights. This ensures we deliver the best possible solution."
-    }
+      description:
+        "We embrace an iterative approach, constantly refining and improving based on feedback and new insights. This ensures we deliver the best possible solution.",
+    },
   ];
 
   const methodology = [
     {
       phase: "Discovery",
       duration: "1-2 weeks",
-      description: "We start by deeply understanding your business, users, and goals through research, interviews, and analysis.",
-      activities: ["Stakeholder interviews", "User research", "Competitive analysis", "Technical assessment"],
-      outcome: "Clear project scope and requirements"
+      description:
+        "We start by deeply understanding your business, users, and goals through research, interviews, and analysis.",
+      activities: [
+        "Stakeholder interviews",
+        "User research",
+        "Competitive analysis",
+        "Technical assessment",
+      ],
+      outcome: "Clear project scope and requirements",
     },
     {
       phase: "Strategy & Planning",
       duration: "1 week",
-      description: "Based on our discovery findings, we develop a comprehensive strategy and detailed project plan.",
-      activities: ["Information architecture", "User journey mapping", "Technical planning", "Project roadmap"],
-      outcome: "Detailed project plan and timeline"
+      description:
+        "Based on our discovery findings, we develop a comprehensive strategy and detailed project plan.",
+      activities: [
+        "Information architecture",
+        "User journey mapping",
+        "Technical planning",
+        "Project roadmap",
+      ],
+      outcome: "Detailed project plan and timeline",
     },
     {
       phase: "Design",
       duration: "2-4 weeks",
-      description: "We create beautiful, functional designs that align with your brand and serve your users' needs.",
-      activities: ["Wireframing", "Visual design", "Prototyping", "Design system creation"],
-      outcome: "Complete design system and prototypes"
+      description:
+        "We create beautiful, functional designs that align with your brand and serve your users' needs.",
+      activities: [
+        "Wireframing",
+        "Visual design",
+        "Prototyping",
+        "Design system creation",
+      ],
+      outcome: "Complete design system and prototypes",
     },
     {
       phase: "Development",
       duration: "4-12 weeks",
-      description: "Our developers bring the designs to life using modern technologies and best practices.",
-      activities: ["Frontend development", "Backend development", "Database design", "API integration"],
-      outcome: "Fully functional application"
+      description:
+        "Our developers bring the designs to life using modern technologies and best practices.",
+      activities: [
+        "Frontend development",
+        "Backend development",
+        "Database design",
+        "API integration",
+      ],
+      outcome: "Fully functional application",
     },
     {
       phase: "Testing & Refinement",
       duration: "1-2 weeks",
-      description: "Thorough testing ensures everything works perfectly before launch.",
-      activities: ["Quality assurance", "User testing", "Performance optimization", "Security testing"],
-      outcome: "Production-ready solution"
+      description:
+        "Thorough testing ensures everything works perfectly before launch.",
+      activities: [
+        "Quality assurance",
+        "User testing",
+        "Performance optimization",
+        "Security testing",
+      ],
+      outcome: "Production-ready solution",
     },
     {
       phase: "Launch & Support",
       duration: "Ongoing",
-      description: "We handle the launch and provide ongoing support to ensure continued success.",
-      activities: ["Deployment", "Training", "Documentation", "Ongoing maintenance"],
-      outcome: "Successful launch and continued support"
-    }
+      description:
+        "We handle the launch and provide ongoing support to ensure continued success.",
+      activities: [
+        "Deployment",
+        "Training",
+        "Documentation",
+        "Ongoing maintenance",
+      ],
+      outcome: "Successful launch and continued support",
+    },
   ];
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Our Way to Work - Dumb Potato Methodology"
         description="Discover our human-centered, privacy-first approach to digital development. Learn about our collaborative methodology and principles that guide every project."
         keywords="methodology, work process, agile development, user-centered design, privacy-first development, collaborative approach"
         url="https://dumbpotato.com/our-way-to-work"
       />
-      
+
       <Navigation />
-      
+
       <main className="bg-cream-50 min-h-screen pt-24">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -91,9 +131,10 @@ const OurWayToWork = () => {
                 Our Way to <span className="text-orange-500 italic">Work</span>
               </h1>
               <p className="font-bricolage text-xl text-dark-950 leading-relaxed max-w-3xl mx-auto">
-                Our methodology is built on principles of collaboration, transparency, and 
-                human-centered design. We believe great digital products are created through 
-                thoughtful process and genuine partnership.
+                Our methodology is built on principles of collaboration,
+                transparency, and human-centered design. We believe great
+                digital products are created through thoughtful process and
+                genuine partnership.
               </p>
             </div>
           </div>
@@ -138,11 +179,23 @@ const OurWayToWork = () => {
             <div className="grid md:grid-cols-3 gap-8">
               <ToolCategory
                 title="Design"
-                tools={["Figma", "Adobe Creative Suite", "Sketch", "InVision", "Principle"]}
+                tools={[
+                  "Figma",
+                  "Adobe Creative Suite",
+                  "Sketch",
+                  "InVision",
+                  "Principle",
+                ]}
               />
               <ToolCategory
                 title="Development"
-                tools={["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL"]}
+                tools={[
+                  "React",
+                  "Next.js",
+                  "Node.js",
+                  "TypeScript",
+                  "PostgreSQL",
+                ]}
               />
               <ToolCategory
                 title="Collaboration"
@@ -186,8 +239,9 @@ const OurWayToWork = () => {
                 Communication is Key
               </h2>
               <p className="font-bricolage text-lg text-dark-950 leading-relaxed mb-12">
-                We believe great projects are built on great communication. Here's how we keep 
-                everyone aligned and informed throughout the development process.
+                We believe great projects are built on great communication.
+                Here's how we keep everyone aligned and informed throughout the
+                development process.
               </p>
               <div className="grid md:grid-cols-3 gap-8">
                 <CommunicationMethod
@@ -214,8 +268,9 @@ const OurWayToWork = () => {
               Ready to Work Together?
             </h2>
             <p className="font-bricolage text-lg text-dark-950 mb-8 max-w-2xl mx-auto">
-              Experience our collaborative approach firsthand. Let's discuss your project 
-              and see how our methodology can bring your vision to life.
+              Experience our collaborative approach firsthand. Let's discuss
+              your project and see how our methodology can bring your vision to
+              life.
             </p>
             <button className="px-8 py-4 bg-orange-500 text-cream-50 font-bricolage text-base rounded-xl hover:bg-orange-600 transition-colors duration-200 shadow-lg">
               Start Your Project
@@ -230,48 +285,86 @@ const OurWayToWork = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Follow Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">Follow Us</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                Follow Us
+              </h3>
               <div className="flex gap-4 opacity-80">
                 <div className="w-4 h-4 bg-dark-950"></div>
                 <div className="w-4 h-4 bg-dark-950"></div>
                 <div className="w-4 h-4 bg-dark-950"></div>
               </div>
             </div>
-            
+
             {/* About Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">About Us</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                About Us
+              </h3>
               <div className="space-y-2 text-dark-900">
-                <a href="#" className="block hover:text-orange-500 transition-colors">Team & Contributors</a>
-                <a href="#" className="block hover:text-orange-500 transition-colors">Privacy Policy</a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Team & Contributors
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Privacy Policy
+                </a>
               </div>
             </div>
-            
+
             {/* Know Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">know us!</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                know us!
+              </h3>
               <div className="space-y-2 text-dark-900">
-                <a href="#" className="block hover:text-orange-500 transition-colors">Our Work</a>
-                <a href="#" className="block hover:text-orange-500 transition-colors">Our way to work</a>
-                <a href="#" className="block hover:text-orange-500 transition-colors">Services</a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Our Work
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Our way to work
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Services
+                </a>
               </div>
             </div>
-            
+
             {/* Contact Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">Contact us</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                Contact us
+              </h3>
               <div className="space-y-2 text-dark-900">
                 <p>info@dumbpotato.com</p>
                 <p>+91-9904538757</p>
-                <p className="text-sm">B-414, 11th Floor, Privilion, Isckon Cross-road<br/>Ahmedabad - 380001</p>
+                <p className="text-sm">
+                  B-414, 11th Floor, Privilion, Isckon Cross-road
+                  <br />
+                  Ahmedabad - 380001
+                </p>
               </div>
             </div>
           </div>
-          
+
           {/* Copyright */}
           <div className="mt-8 pt-8 border-t border-dark-900/20 text-center">
             <p className="font-bricolage text-base text-dark-900">
-              Made with ❤️ by the <span className="text-orange-500 font-bold">dumb potato</span>
+              Made with ❤️ by the{" "}
+              <span className="text-orange-500 font-bold">dumb potato</span>
             </p>
           </div>
         </div>
@@ -284,8 +377,12 @@ const OurWayToWork = () => {
 const PrincipleCard = ({ principle }: { principle: any }) => (
   <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
     <div className="text-orange-500 mb-6">{principle.icon}</div>
-    <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">{principle.title}</h3>
-    <p className="font-bricolage text-dark-950 leading-relaxed">{principle.description}</p>
+    <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">
+      {principle.title}
+    </h3>
+    <p className="font-bricolage text-dark-950 leading-relaxed">
+      {principle.description}
+    </p>
   </div>
 );
 
@@ -300,16 +397,27 @@ const MethodologyPhase = ({ phase, index }: { phase: any; index: number }) => (
     <div className="flex-grow">
       <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
-          <h3 className="font-bricolage text-2xl font-bold text-dark-950">{phase.phase}</h3>
-          <span className="font-bricolage text-orange-500 text-sm font-medium">{phase.duration}</span>
+          <h3 className="font-bricolage text-2xl font-bold text-dark-950">
+            {phase.phase}
+          </h3>
+          <span className="font-bricolage text-orange-500 text-sm font-medium">
+            {phase.duration}
+          </span>
         </div>
-        <p className="font-bricolage text-dark-950 mb-6 leading-relaxed">{phase.description}</p>
+        <p className="font-bricolage text-dark-950 mb-6 leading-relaxed">
+          {phase.description}
+        </p>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <h4 className="font-bricolage text-lg font-semibold text-dark-950 mb-3">Key Activities</h4>
+            <h4 className="font-bricolage text-lg font-semibold text-dark-950 mb-3">
+              Key Activities
+            </h4>
             <ul className="space-y-1">
               {phase.activities.map((activity: string, idx: number) => (
-                <li key={idx} className="font-bricolage text-sm text-dark-950 flex items-center">
+                <li
+                  key={idx}
+                  className="font-bricolage text-sm text-dark-950 flex items-center"
+                >
                   <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                   {activity}
                 </li>
@@ -317,8 +425,12 @@ const MethodologyPhase = ({ phase, index }: { phase: any; index: number }) => (
             </ul>
           </div>
           <div>
-            <h4 className="font-bricolage text-lg font-semibold text-dark-950 mb-3">Outcome</h4>
-            <p className="font-bricolage text-sm text-dark-950">{phase.outcome}</p>
+            <h4 className="font-bricolage text-lg font-semibold text-dark-950 mb-3">
+              Outcome
+            </h4>
+            <p className="font-bricolage text-sm text-dark-950">
+              {phase.outcome}
+            </p>
           </div>
         </div>
       </div>
@@ -329,7 +441,9 @@ const MethodologyPhase = ({ phase, index }: { phase: any; index: number }) => (
 // Tool Category Component
 const ToolCategory = ({ title, tools }: { title: string; tools: string[] }) => (
   <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
-    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-4">{title}</h3>
+    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-4">
+      {title}
+    </h3>
     <div className="space-y-2">
       {tools.map((tool, index) => (
         <div key={index} className="flex items-center">
@@ -342,18 +456,38 @@ const ToolCategory = ({ title, tools }: { title: string; tools: string[] }) => (
 );
 
 // Value in Action Component
-const ValueInAction = ({ title, description }: { title: string; description: string }) => (
+const ValueInAction = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => (
   <div>
-    <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">{title}</h3>
-    <p className="font-bricolage text-dark-950 leading-relaxed">{description}</p>
+    <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">
+      {title}
+    </h3>
+    <p className="font-bricolage text-dark-950 leading-relaxed">
+      {description}
+    </p>
   </div>
 );
 
 // Communication Method Component
-const CommunicationMethod = ({ title, description }: { title: string; description: string }) => (
+const CommunicationMethod = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => (
   <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
-    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">{title}</h3>
-    <p className="font-bricolage text-sm text-dark-950 leading-relaxed">{description}</p>
+    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">
+      {title}
+    </h3>
+    <p className="font-bricolage text-sm text-dark-950 leading-relaxed">
+      {description}
+    </p>
   </div>
 );
 

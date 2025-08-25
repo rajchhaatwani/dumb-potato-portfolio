@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 interface SEOProps {
   title?: string;
@@ -10,15 +10,17 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = 'Dumb Potato - Creative Digital Solutions',
-  description = 'Beautifully designed, privacy-focused digital solutions. We create innovative websites and applications that prioritize user experience and data privacy.',
-  keywords = 'web development, digital solutions, creative agency, UI/UX design, privacy-focused, portfolio',
-  image = '/og-image.jpg',
-  url = 'https://dumbpotato.com',
-  type = 'website'
+  title = "Dumb Potato - Creative Digital Solutions",
+  description = "Beautifully designed, privacy-focused digital solutions. We create innovative websites and applications that prioritize user experience and data privacy.",
+  keywords = "web development, digital solutions, creative agency, UI/UX design, privacy-focused, portfolio",
+  image = "/og-image.jpg",
+  url = "https://dumbpotato.com",
+  type = "website",
 }: SEOProps) => {
-  const fullTitle = title.includes('Dumb Potato') ? title : `${title} | Dumb Potato`;
-  
+  const fullTitle = title.includes("Dumb Potato")
+    ? title
+    : `${title} | Dumb Potato`;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -30,7 +32,7 @@ const SEO = ({
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
@@ -39,45 +41,45 @@ const SEO = ({
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content="Dumb Potato" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:creator" content="@dumbpotato" />
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#F76F53" />
       <meta name="msapplication-TileColor" content="#F2F0E3" />
       <link rel="canonical" href={url} />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Dumb Potato",
-          "description": description,
-          "url": url,
-          "logo": `${url}/logo.png`,
-          "contactPoint": {
+          name: "Dumb Potato",
+          description: description,
+          url: url,
+          logo: `${url}/logo.png`,
+          contactPoint: {
             "@type": "ContactPoint",
-            "telephone": "+91-9904538757",
-            "contactType": "Customer Service",
-            "email": "info@dumbpotato.com"
+            telephone: "+91-9904538757",
+            contactType: "Customer Service",
+            email: "info@dumbpotato.com",
           },
-          "address": {
+          address: {
             "@type": "PostalAddress",
-            "streetAddress": "B-414, 11th Floor, Privilion, Isckon Cross-road",
-            "addressLocality": "Ahmedabad",
-            "postalCode": "380001",
-            "addressCountry": "IN"
+            streetAddress: "B-414, 11th Floor, Privilion, Isckon Cross-road",
+            addressLocality: "Ahmedabad",
+            postalCode: "380001",
+            addressCountry: "IN",
           },
-          "sameAs": [
+          sameAs: [
             "https://twitter.com/dumbpotato",
-            "https://github.com/dumbpotato"
-          ]
+            "https://github.com/dumbpotato",
+          ],
         })}
       </script>
     </Helmet>

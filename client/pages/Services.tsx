@@ -1,64 +1,100 @@
-import Navigation from '@/components/Navigation';
-import SEO from '@/components/SEO';
-import { Code, Palette, Search, Shield, Smartphone, Globe } from 'lucide-react';
+import Navigation from "@/components/Navigation";
+import SEO from "@/components/SEO";
+import { Code, Palette, Search, Shield, Smartphone, Globe } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies and best practices.",
-      features: ["Responsive Design", "Performance Optimization", "SEO Ready", "Accessibility Compliant"],
-      pricing: "Starting from $2,500"
+      description:
+        "Custom websites and web applications built with modern technologies and best practices.",
+      features: [
+        "Responsive Design",
+        "Performance Optimization",
+        "SEO Ready",
+        "Accessibility Compliant",
+      ],
+      pricing: "Starting from $2,500",
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that provide exceptional user experiences.",
-      features: ["iOS & Android", "Cross-platform Solutions", "App Store Optimization", "Maintenance & Updates"],
-      pricing: "Starting from $5,000"
+      description:
+        "Native and cross-platform mobile applications that provide exceptional user experiences.",
+      features: [
+        "iOS & Android",
+        "Cross-platform Solutions",
+        "App Store Optimization",
+        "Maintenance & Updates",
+      ],
+      pricing: "Starting from $5,000",
     },
     {
       icon: <Palette className="w-8 h-8" />,
       title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that prioritize user experience and accessibility.",
-      features: ["User Research", "Wireframing & Prototyping", "Visual Design", "Usability Testing"],
-      pricing: "Starting from $1,500"
+      description:
+        "Beautiful, intuitive designs that prioritize user experience and accessibility.",
+      features: [
+        "User Research",
+        "Wireframing & Prototyping",
+        "Visual Design",
+        "Usability Testing",
+      ],
+      pricing: "Starting from $1,500",
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "E-commerce Solutions",
-      description: "Complete e-commerce platforms that drive sales and provide smooth shopping experiences.",
-      features: ["Payment Integration", "Inventory Management", "Order Processing", "Analytics & Reporting"],
-      pricing: "Starting from $3,500"
+      description:
+        "Complete e-commerce platforms that drive sales and provide smooth shopping experiences.",
+      features: [
+        "Payment Integration",
+        "Inventory Management",
+        "Order Processing",
+        "Analytics & Reporting",
+      ],
+      pricing: "Starting from $3,500",
     },
     {
       icon: <Search className="w-8 h-8" />,
       title: "Digital Marketing",
-      description: "Strategic digital marketing services to help your business reach and engage your target audience.",
-      features: ["SEO Optimization", "Content Marketing", "Social Media Strategy", "Analytics & Insights"],
-      pricing: "Starting from $1,000/month"
+      description:
+        "Strategic digital marketing services to help your business reach and engage your target audience.",
+      features: [
+        "SEO Optimization",
+        "Content Marketing",
+        "Social Media Strategy",
+        "Analytics & Insights",
+      ],
+      pricing: "Starting from $1,000/month",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Privacy & Security",
-      description: "Comprehensive security audits and privacy-focused solutions to protect your digital assets.",
-      features: ["Security Audits", "GDPR Compliance", "Data Protection", "Privacy by Design"],
-      pricing: "Starting from $2,000"
-    }
+      description:
+        "Comprehensive security audits and privacy-focused solutions to protect your digital assets.",
+      features: [
+        "Security Audits",
+        "GDPR Compliance",
+        "Data Protection",
+        "Privacy by Design",
+      ],
+      pricing: "Starting from $2,000",
+    },
   ];
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Services - Dumb Potato Digital Solutions"
         description="Comprehensive digital services including web development, mobile apps, UI/UX design, e-commerce solutions, and privacy-focused development. Get a quote today."
         keywords="web development, mobile app development, UI UX design, e-commerce, digital marketing, privacy security, development services"
         url="https://dumbpotato.com/services"
       />
-      
+
       <Navigation />
-      
+
       <main className="bg-cream-50 min-h-screen pt-24">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -68,8 +104,9 @@ const Services = () => {
                 Our <span className="text-orange-500 italic">Services</span>
               </h1>
               <p className="font-bricolage text-xl text-dark-950 leading-relaxed max-w-3xl mx-auto">
-                We offer comprehensive digital solutions designed to help your business thrive 
-                in the digital landscape while maintaining the highest standards of privacy and quality.
+                We offer comprehensive digital solutions designed to help your
+                business thrive in the digital landscape while maintaining the
+                highest standards of privacy and quality.
               </p>
             </div>
           </div>
@@ -166,8 +203,8 @@ const Services = () => {
               Ready to Get Started?
             </h2>
             <p className="font-bricolage text-lg text-dark-950 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help bring your vision to life. 
-              Contact us today for a free consultation.
+              Let's discuss your project and see how we can help bring your
+              vision to life. Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-orange-500 text-cream-50 font-bricolage text-base rounded-xl hover:bg-orange-600 transition-colors duration-200 shadow-lg">
@@ -187,48 +224,86 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Follow Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">Follow Us</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                Follow Us
+              </h3>
               <div className="flex gap-4 opacity-80">
                 <div className="w-4 h-4 bg-dark-950"></div>
                 <div className="w-4 h-4 bg-dark-950"></div>
                 <div className="w-4 h-4 bg-dark-950"></div>
               </div>
             </div>
-            
+
             {/* About Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">About Us</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                About Us
+              </h3>
               <div className="space-y-2 text-dark-900">
-                <a href="#" className="block hover:text-orange-500 transition-colors">Team & Contributors</a>
-                <a href="#" className="block hover:text-orange-500 transition-colors">Privacy Policy</a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Team & Contributors
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Privacy Policy
+                </a>
               </div>
             </div>
-            
+
             {/* Know Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">know us!</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                know us!
+              </h3>
               <div className="space-y-2 text-dark-900">
-                <a href="#" className="block hover:text-orange-500 transition-colors">Our Work</a>
-                <a href="#" className="block hover:text-orange-500 transition-colors">Our way to work</a>
-                <a href="#" className="block hover:text-orange-500 transition-colors">Services</a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Our Work
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Our way to work
+                </a>
+                <a
+                  href="#"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Services
+                </a>
               </div>
             </div>
-            
+
             {/* Contact Us */}
             <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">Contact us</h3>
+              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
+                Contact us
+              </h3>
               <div className="space-y-2 text-dark-900">
                 <p>info@dumbpotato.com</p>
                 <p>+91-9904538757</p>
-                <p className="text-sm">B-414, 11th Floor, Privilion, Isckon Cross-road<br/>Ahmedabad - 380001</p>
+                <p className="text-sm">
+                  B-414, 11th Floor, Privilion, Isckon Cross-road
+                  <br />
+                  Ahmedabad - 380001
+                </p>
               </div>
             </div>
           </div>
-          
+
           {/* Copyright */}
           <div className="mt-8 pt-8 border-t border-dark-900/20 text-center">
             <p className="font-bricolage text-base text-dark-900">
-              Made with ❤️ by the <span className="text-orange-500 font-bold">dumb potato</span>
+              Made with ❤️ by the{" "}
+              <span className="text-orange-500 font-bold">dumb potato</span>
             </p>
           </div>
         </div>
@@ -241,27 +316,40 @@ const Services = () => {
 const ServiceCard = ({ service }: { service: any }) => (
   <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 hover:shadow-xl transition-all duration-300">
     <div className="text-orange-500 mb-6">{service.icon}</div>
-    <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">{service.title}</h3>
-    <p className="font-bricolage text-dark-950 mb-6 leading-relaxed">{service.description}</p>
+    <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">
+      {service.title}
+    </h3>
+    <p className="font-bricolage text-dark-950 mb-6 leading-relaxed">
+      {service.description}
+    </p>
     <ul className="space-y-2 mb-6">
       {service.features.map((feature: string, index: number) => (
-        <li key={index} className="font-bricolage text-sm text-dark-950 flex items-center">
+        <li
+          key={index}
+          className="font-bricolage text-sm text-dark-950 flex items-center"
+        >
           <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
           {feature}
         </li>
       ))}
     </ul>
     <div className="border-t border-cream-300/30 pt-4">
-      <p className="font-bricolage text-orange-500 font-semibold">{service.pricing}</p>
+      <p className="font-bricolage text-orange-500 font-semibold">
+        {service.pricing}
+      </p>
     </div>
   </div>
 );
 
 // Process Step Component
-const ProcessStep = ({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
+const ProcessStep = ({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
 }) => (
   <div className="flex gap-6">
     <div className="flex-shrink-0">
@@ -270,20 +358,31 @@ const ProcessStep = ({ step, title, description }: {
       </div>
     </div>
     <div>
-      <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">{title}</h3>
-      <p className="font-bricolage text-dark-950 leading-relaxed">{description}</p>
+      <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">
+        {title}
+      </h3>
+      <p className="font-bricolage text-dark-950 leading-relaxed">
+        {description}
+      </p>
     </div>
   </div>
 );
 
 // Feature Card Component
-const FeatureCard = ({ title, description }: { 
-  title: string; 
-  description: string; 
+const FeatureCard = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
 }) => (
   <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
-    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">{title}</h3>
-    <p className="font-bricolage text-sm text-dark-950 leading-relaxed">{description}</p>
+    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">
+      {title}
+    </h3>
+    <p className="font-bricolage text-sm text-dark-950 leading-relaxed">
+      {description}
+    </p>
   </div>
 );
 

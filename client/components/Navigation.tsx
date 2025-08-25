@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { href: '/about', label: 'About us' },
-    { href: '/our-work', label: 'Our work' },
-    { href: '/services', label: 'Services' }
+    { href: "/about", label: "About us" },
+    { href: "/our-work", label: "Our work" },
+    { href: "/services", label: "Services" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -39,7 +39,7 @@ const Navigation = () => {
                   to={item.href}
                   className={cn(
                     "font-bricolage text-base transition-colors duration-200 hover:text-orange-500",
-                    isActive(item.href) ? "text-orange-500" : "text-foreground"
+                    isActive(item.href) ? "text-orange-500" : "text-foreground",
                   )}
                 >
                   {item.label}
@@ -79,13 +79,13 @@ const Navigation = () => {
             className="fixed inset-0 bg-background/50 backdrop-blur-sm"
             onClick={() => setIsMenuOpen(false)}
           />
-          
+
           {/* Menu Panel */}
           <div className="fixed top-20 right-4 left-4 glass rounded-2xl shadow-2xl overflow-hidden animate-slide-up">
             {/* Enhanced glass effect overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-cream-100/60 to-cream-200/40 backdrop-blur-lg" />
             <div className="absolute inset-0 bg-gradient-to-br from-orange-200/10 to-orange-300/5" />
-            
+
             {/* Menu content */}
             <div className="relative p-6">
               {/* Navigation Links */}
@@ -99,7 +99,7 @@ const Navigation = () => {
                       "block py-3 px-4 font-bricolage text-lg rounded-xl transition-all duration-200",
                       isActive(item.href)
                         ? "bg-orange-500/20 text-orange-600 font-medium"
-                        : "text-foreground hover:bg-muted/50 hover:text-orange-500"
+                        : "text-foreground hover:bg-muted/50 hover:text-orange-500",
                     )}
                   >
                     {item.label}
@@ -118,8 +118,14 @@ const Navigation = () => {
 
               {/* Enhanced decorative elements */}
               <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-orange-200/40 to-orange-300/30 rounded-full blur-xl animate-float" />
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-cream-300/50 to-cream-400/40 rounded-full blur-lg animate-float" style={{ animationDelay: '1s' }} />
-              <div className="absolute top-1/2 left-1/2 w-8 h-8 bg-gradient-to-br from-orange-100/30 to-orange-200/20 rounded-full blur-md animate-float" style={{ animationDelay: '2s' }} />
+              <div
+                className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-cream-300/50 to-cream-400/40 rounded-full blur-lg animate-float"
+                style={{ animationDelay: "1s" }}
+              />
+              <div
+                className="absolute top-1/2 left-1/2 w-8 h-8 bg-gradient-to-br from-orange-100/30 to-orange-200/20 rounded-full blur-md animate-float"
+                style={{ animationDelay: "2s" }}
+              />
             </div>
           </div>
         </div>
