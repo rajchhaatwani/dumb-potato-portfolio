@@ -18,15 +18,15 @@ const Navigation = () => {
   return (
     <>
       {/* Desktop and Mobile Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-cream-50/80 backdrop-blur-sm border-b border-cream-300/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/20">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-full border-2 border-dark-950 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full border border-dark-950"></div>
+              <div className="w-8 h-8 rounded-full border-2 border-foreground flex items-center justify-center">
+                <div className="w-4 h-4 rounded-full border border-foreground"></div>
               </div>
-              <span className="font-bricolage text-lg font-bold text-dark-950">
+              <span className="font-bricolage text-lg font-bold text-foreground">
                 dumb potato
               </span>
             </Link>
@@ -39,7 +39,7 @@ const Navigation = () => {
                   to={item.href}
                   className={cn(
                     "font-bricolage text-base transition-colors duration-200 hover:text-orange-500",
-                    isActive(item.href) ? "text-orange-500" : "text-dark-950"
+                    isActive(item.href) ? "text-orange-500" : "text-foreground"
                   )}
                 >
                   {item.label}
@@ -50,7 +50,7 @@ const Navigation = () => {
             {/* Desktop Contact Button */}
             <Link
               to="/contact"
-              className="hidden md:block px-6 py-3 bg-dark-800 text-cream-50 font-bricolage text-sm rounded-xl hover:bg-dark-900 transition-colors duration-200"
+              className="hidden md:block px-6 py-3 bg-primary text-primary-foreground font-bricolage text-sm rounded-xl hover:bg-primary/80 transition-colors duration-200"
             >
               Contact us
             </Link>
@@ -62,9 +62,9 @@ const Navigation = () => {
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6 text-dark-950 transition-transform duration-200" />
+                <X className="w-6 h-6 text-foreground transition-transform duration-200" />
               ) : (
-                <Menu className="w-6 h-6 text-dark-950 transition-transform duration-200" />
+                <Menu className="w-6 h-6 text-foreground transition-transform duration-200" />
               )}
             </button>
           </div>
@@ -75,8 +75,8 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
           {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-dark-950/20 backdrop-blur-sm"
+          <div
+            className="fixed inset-0 bg-background/50 backdrop-blur-sm"
             onClick={() => setIsMenuOpen(false)}
           />
           
@@ -99,7 +99,7 @@ const Navigation = () => {
                       "block py-3 px-4 font-bricolage text-lg rounded-xl transition-all duration-200",
                       isActive(item.href)
                         ? "bg-orange-500/20 text-orange-600 font-medium"
-                        : "text-dark-950 hover:bg-cream-200/50 hover:text-orange-500"
+                        : "text-foreground hover:bg-muted/50 hover:text-orange-500"
                     )}
                   >
                     {item.label}
@@ -111,7 +111,7 @@ const Navigation = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full py-4 px-6 bg-dark-800 text-cream-50 font-bricolage text-base text-center rounded-xl hover:bg-dark-900 transition-colors duration-200"
+                className="block w-full py-4 px-6 bg-primary text-primary-foreground font-bricolage text-base text-center rounded-xl hover:bg-primary/80 transition-colors duration-200"
               >
                 Contact us
               </Link>
