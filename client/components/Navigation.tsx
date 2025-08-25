@@ -58,13 +58,13 @@ const Navigation = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-cream-200/50 backdrop-blur-sm border border-cream-300/30 hover:bg-cream-200/70 transition-all duration-200"
+              className="md:hidden p-3 rounded-xl glass hover:bg-cream-200/60 transition-all duration-300 shadow-lg hover:shadow-xl"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6 text-dark-950" />
+                <X className="w-6 h-6 text-dark-950 transition-transform duration-200" />
               ) : (
-                <Menu className="w-6 h-6 text-dark-950" />
+                <Menu className="w-6 h-6 text-dark-950 transition-transform duration-200" />
               )}
             </button>
           </div>
@@ -81,9 +81,10 @@ const Navigation = () => {
           />
           
           {/* Menu Panel */}
-          <div className="fixed top-20 right-4 left-4 bg-cream-50/95 backdrop-blur-md border border-cream-300/30 rounded-2xl shadow-2xl overflow-hidden">
-            {/* Glass effect overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cream-100/80 to-cream-200/60 backdrop-blur-md" />
+          <div className="fixed top-20 right-4 left-4 glass rounded-2xl shadow-2xl overflow-hidden animate-slide-up">
+            {/* Enhanced glass effect overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-cream-100/60 to-cream-200/40 backdrop-blur-lg" />
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-200/10 to-orange-300/5" />
             
             {/* Menu content */}
             <div className="relative p-6">
@@ -115,9 +116,10 @@ const Navigation = () => {
                 Contact us
               </Link>
 
-              {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-orange-200/30 to-orange-300/20 rounded-full blur-xl" />
-              <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-cream-300/40 to-cream-400/30 rounded-full blur-lg" />
+              {/* Enhanced decorative elements */}
+              <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-orange-200/40 to-orange-300/30 rounded-full blur-xl animate-float" />
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-cream-300/50 to-cream-400/40 rounded-full blur-lg animate-float" style={{ animationDelay: '1s' }} />
+              <div className="absolute top-1/2 left-1/2 w-8 h-8 bg-gradient-to-br from-orange-100/30 to-orange-200/20 rounded-full blur-md animate-float" style={{ animationDelay: '2s' }} />
             </div>
           </div>
         </div>
