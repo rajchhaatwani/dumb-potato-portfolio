@@ -98,7 +98,55 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.cream.100');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.cream.300');
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.orange.500');
+  }
+
+  /* Focus styles for accessibility */
+  .focus-visible:focus {
+    outline: 2px solid theme('colors.orange.500');
+    outline-offset: 2px;
+  }
+
+  /* Glass morphism utility */
+  .glass {
+    background: rgba(242, 240, 227, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(209, 207, 192, 0.18);
+  }
+
+  /* Text selection styling */
+  ::selection {
+    background-color: theme('colors.orange.500');
+    color: theme('colors.cream.50');
+  }
+
+  ::-moz-selection {
+    background-color: theme('colors.orange.500');
+    color: theme('colors.cream.50');
   }
 }
