@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import SEO from '@/components/SEO';
+import FloralPattern from '@/components/FloralPattern';
 import { ArrowRight, Github, Twitter, Star, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -16,8 +17,10 @@ const Index = () => {
       
       <main className="bg-cream-50 min-h-screen">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4">
-          <div className="container mx-auto text-center">
+        <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+          <FloralPattern position="top-right" size="lg" opacity={0.08} />
+          <FloralPattern position="bottom-left" size="md" opacity={0.06} />
+          <div className="container mx-auto text-center relative z-10">
             {/* Main Heading */}
             <div className="mb-8">
               <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none mb-4">
@@ -82,8 +85,9 @@ const Index = () => {
         </section>
 
         {/* Productivity Section */}
-        <section className="px-4 mb-20">
-          <div className="container mx-auto">
+        <section className="relative px-4 mb-20 overflow-hidden">
+          <FloralPattern position="top-left" size="md" opacity={0.05} />
+          <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left Content */}
               <div>
@@ -151,8 +155,9 @@ const Index = () => {
         </section>
 
         {/* Core Values Section */}
-        <section className="px-4 mb-20">
-          <div className="container mx-auto text-center">
+        <section className="relative px-4 mb-20 overflow-hidden">
+          <FloralPattern position="center" size="lg" opacity={0.04} />
+          <div className="container mx-auto text-center relative z-10">
             <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-dark-950 mb-6">
               <span>Our</span> <span>Core</span> <span>Values</span>
             </h2>
@@ -174,11 +179,12 @@ const Index = () => {
         </section>
 
         {/* Footer CTA Section */}
-        <section className="relative px-4 pb-20">
+        <section className="relative px-4 pb-20 overflow-hidden">
           {/* Curved Background */}
           <div className="absolute inset-x-0 bottom-0 h-96 bg-cream-300 rounded-t-[500px] -mx-4"></div>
-          
-          <div className="container mx-auto relative">
+          <FloralPattern position="bottom-right" size="sm" opacity={0.1} />
+
+          <div className="container mx-auto relative z-10">
             <div className="text-left max-w-lg">
               <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
                 dumb potato
