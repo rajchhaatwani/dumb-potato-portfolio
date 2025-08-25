@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleContact, createContactRateLimit } from "./routes/contact";
 
 export function createServer() {
   const app = express();
@@ -18,6 +19,10 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Contact form endpoint with rate limiting
+  const contactRateLimit = createContactRateLimit();
+  app.post("/api/contact", contactRateLimit, handleContact);
 
   return app;
 }
