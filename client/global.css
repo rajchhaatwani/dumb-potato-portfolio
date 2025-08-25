@@ -108,17 +108,17 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom scrollbar for webkit browsers */
+  /* Custom scrollbar for webkit browsers - dark theme */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors.cream.100');
+    background: theme('colors.dark.800');
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors.cream.300');
+    background: theme('colors.dark.600');
     border-radius: 4px;
   }
 
@@ -137,6 +137,31 @@
     background: rgba(31, 31, 31, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(46, 46, 46, 0.5);
+  }
+
+  /* Override any remaining light colors */
+  .bg-cream-50 {
+    background-color: theme('colors.background') !important;
+  }
+
+  .bg-cream-100 {
+    background-color: theme('colors.muted') !important;
+  }
+
+  .bg-cream-300 {
+    background-color: theme('colors.muted') !important;
+  }
+
+  .text-dark-950 {
+    color: theme('colors.foreground') !important;
+  }
+
+  .text-dark-900 {
+    color: theme('colors.foreground') !important;
+  }
+
+  .border-dark-900 {
+    border-color: theme('colors.border') !important;
   }
 
   /* Text selection styling */
