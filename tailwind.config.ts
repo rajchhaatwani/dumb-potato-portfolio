@@ -13,6 +13,12 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'judson': ['Judson', 'serif'],
+        'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+        'sans': ['Bricolage Grotesque', 'system-ui', 'sans-serif'],
+        'serif': ['Judson', 'Georgia', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
