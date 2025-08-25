@@ -14,7 +14,7 @@ const AboutUs = () => {
       
       <Navigation />
       
-      <main className="bg-cream-50 min-h-screen pt-24">
+      <main className="bg-background min-h-screen pt-24">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
