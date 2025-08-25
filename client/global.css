@@ -11,44 +11,44 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* Portfolio theme - warm cream base */
-    --background: 48 43% 96%; /* #F2F0E3 */
-    --foreground: 0 0% 0%; /* #000 */
+    /* Dark matte theme */
+    --background: 0 0% 8%; /* #141414 */
+    --foreground: 48 43% 96%; /* #F2F0E3 */
 
-    --card: 48 43% 96%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 12%; /* #1F1F1F */
+    --card-foreground: 48 43% 96%;
 
-    --popover: 48 43% 96%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 48 43% 96%;
 
     --primary: 11 93% 64%; /* Orange #F76F53 */
-    --primary-foreground: 48 43% 96%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 48 28% 82%; /* Light cream #D1CFC0 */
-    --secondary-foreground: 0 0% 12%; /* #1F1F1F */
+    --secondary: 0 0% 18%; /* #2E2E2E */
+    --secondary-foreground: 48 43% 96%;
 
-    --muted: 48 28% 82%;
-    --muted-foreground: 0 0% 18%; /* #2E2E2E */
+    --muted: 0 0% 15%; /* #262626 */
+    --muted-foreground: 48 28% 82%; /* #D1CFC0 */
 
     --accent: 11 93% 64%; /* Orange accent */
-    --accent-foreground: 48 43% 96%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 48 43% 96%;
 
-    --border: 48 28% 82%;
-    --input: 48 28% 82%;
+    --border: 0 0% 18%; /* #2E2E2E */
+    --input: 0 0% 15%;
     --ring: 11 93% 64%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 48 43% 96%;
-    --sidebar-foreground: 0 0% 12%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 48 43% 96%;
     --sidebar-primary: 11 93% 64%;
-    --sidebar-primary-foreground: 48 43% 96%;
-    --sidebar-accent: 48 28% 82%;
-    --sidebar-accent-foreground: 0 0% 12%;
-    --sidebar-border: 48 28% 82%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 48 43% 96%;
+    --sidebar-border: 0 0% 18%;
     --sidebar-ring: 11 93% 64%;
   }
 
@@ -132,11 +132,11 @@
     outline-offset: 2px;
   }
 
-  /* Glass morphism utility */
+  /* Dark glass morphism utility */
   .glass {
-    background: rgba(242, 240, 227, 0.25);
+    background: rgba(31, 31, 31, 0.4);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(209, 207, 192, 0.18);
+    border: 1px solid rgba(46, 46, 46, 0.5);
   }
 
   /* Text selection styling */
