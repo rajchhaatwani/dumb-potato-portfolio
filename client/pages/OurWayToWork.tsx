@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import { Users, Lightbulb, Cog, Rocket, Heart, Shield } from "lucide-react";
@@ -59,7 +60,7 @@ const OurWayToWork = () => {
     },
     {
       phase: "Design",
-      duration: "2-4 weeks",
+      duration: "1 weeks",
       description:
         "We create beautiful, functional designs that align with your brand and serve your users' needs.",
       activities: [
@@ -72,7 +73,7 @@ const OurWayToWork = () => {
     },
     {
       phase: "Development",
-      duration: "4-12 weeks",
+      duration: "4-6 weeks",
       description:
         "Our developers bring the designs to life using modern technologies and best practices.",
       activities: [
@@ -85,7 +86,7 @@ const OurWayToWork = () => {
     },
     {
       phase: "Testing & Refinement",
-      duration: "1-2 weeks",
+      duration: "1 weeks",
       description:
         "Thorough testing ensures everything works perfectly before launch.",
       activities: [
@@ -98,7 +99,7 @@ const OurWayToWork = () => {
     },
     {
       phase: "Launch & Support",
-      duration: "Ongoing",
+      duration: "1 week",
       description:
         "We handle the launch and provide ongoing support to ensure continued success.",
       activities: [
@@ -141,7 +142,7 @@ const OurWayToWork = () => {
         </section>
 
         {/* Principles Section */}
-        <section className="py-20 px-4 bg-cream-100/50">
+        <section className="py-20 px-4 ">
           <div className="container mx-auto">
             <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-12 text-center">
               Our Core Principles
@@ -171,7 +172,7 @@ const OurWayToWork = () => {
         </section>
 
         {/* Tools & Technologies Section */}
-        <section className="py-20 px-4 bg-cream-100/50">
+        <section className="py-20 px-4 ">
           <div className="container mx-auto">
             <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-12 text-center">
               Tools & Technologies
@@ -232,7 +233,7 @@ const OurWayToWork = () => {
         </section>
 
         {/* Communication Section */}
-        <section className="py-20 px-4 bg-cream-100/50">
+        <section className="py-20 px-4 ">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-8">
@@ -280,95 +281,7 @@ const OurWayToWork = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-cream-300 px-4 py-12">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Follow Us */}
-            <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
-                Follow Us
-              </h3>
-              <div className="flex gap-4 opacity-80">
-                <div className="w-4 h-4 bg-dark-950"></div>
-                <div className="w-4 h-4 bg-dark-950"></div>
-                <div className="w-4 h-4 bg-dark-950"></div>
-              </div>
-            </div>
-
-            {/* About Us */}
-            <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
-                About Us
-              </h3>
-              <div className="space-y-2 text-dark-900">
-                <a
-                  href="#"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Team & Contributors
-                </a>
-                <a
-                  href="#"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Privacy Policy
-                </a>
-              </div>
-            </div>
-
-            {/* Know Us */}
-            <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
-                know us!
-              </h3>
-              <div className="space-y-2 text-dark-900">
-                <a
-                  href="#"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Our Work
-                </a>
-                <a
-                  href="#"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Our way to work
-                </a>
-                <a
-                  href="#"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Services
-                </a>
-              </div>
-            </div>
-
-            {/* Contact Us */}
-            <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
-                Contact us
-              </h3>
-              <div className="space-y-2 text-dark-900">
-                <p>info@dumbpotato.com</p>
-                <p>+91-9904538757</p>
-                <p className="text-sm">
-                  B-414, 11th Floor, Privilion, Isckon Cross-road
-                  <br />
-                  Ahmedabad - 380001
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="mt-8 pt-8 border-t border-dark-900/20 text-center">
-            <p className="font-bricolage text-base text-dark-900">
-              Made with ❤️ by the{" "}
-              <span className="text-orange-500 font-bold">dumb potato</span>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </>
   );
 };

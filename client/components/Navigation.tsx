@@ -99,7 +99,7 @@ const Navigation = () => {
                       "block py-3 px-4 font-bricolage text-lg rounded-xl transition-all duration-200",
                       isActive(item.href)
                         ? "bg-orange-500/20 text-orange-600 font-medium"
-                        : "text-foreground hover:bg-muted/50 hover:text-orange-500",
+                        : "text-foreground hover:/50 hover:text-orange-500",
                     )}
                   >
                     {item.label}
