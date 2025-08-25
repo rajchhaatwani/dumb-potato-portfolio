@@ -181,11 +181,11 @@ const ContactUs = () => {
               </p>
               <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">< 24h</div>
+                  <div className="text-3xl font-bold text-orange-500 mb-2">&lt; 24h</div>
                   <p className="font-bricolage text-sm text-dark-950">Email Response</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">< 2h</div>
+                  <div className="text-3xl font-bold text-orange-500 mb-2">&lt; 2h</div>
                   <p className="font-bricolage text-sm text-dark-950">Phone Response</p>
                 </div>
                 <div className="text-center">
