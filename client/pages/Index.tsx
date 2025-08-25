@@ -15,7 +15,7 @@ const Index = () => {
       
       <Navigation />
       
-      <main className="bg-cream-50 min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 overflow-hidden">
           <FloralPattern position="top-right" size="lg" opacity={0.08} />
@@ -24,21 +24,21 @@ const Index = () => {
             {/* Main Heading */}
             <div className="mb-8">
               <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none mb-4">
-                <span className="text-dark-950">welcome to</span>
+                <span className="text-foreground">welcome to</span>
               </h1>
               <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none">
-                <span className="text-dark-950">a </span>
+                <span className="text-foreground">a </span>
                 <span className="text-orange-500 italic">calmer</span>
-                <span className="text-dark-950"> internet</span>
+                <span className="text-foreground"> internet</span>
               </h1>
             </div>
             
             {/* Subtitle */}
             <div className="mb-12 space-y-2">
-              <p className="font-bricolage text-base text-dark-950 max-w-md mx-auto">
+              <p className="font-bricolage text-base text-muted-foreground max-w-md mx-auto">
                 Beautifully designed, privacy-focused, and packed with features.
               </p>
-              <p className="font-bricolage text-base text-dark-950 max-w-md mx-auto">
+              <p className="font-bricolage text-base text-muted-foreground max-w-md mx-auto">
                 We care about your experience, not your data.
               </p>
             </div>
@@ -47,14 +47,14 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link
                 to="/contact"
-                className="flex items-center gap-3 px-8 py-4 bg-cream-300 rounded-xl font-bricolage text-sm text-dark-900 hover:bg-cream-400 transition-colors duration-200 shadow-lg"
+                className="flex items-center gap-3 px-8 py-4 bg-secondary rounded-xl font-bricolage text-sm text-secondary-foreground hover:bg-muted transition-colors duration-200 shadow-lg"
               >
                 Start Your Journey with us
                 <ArrowRight className="w-6 h-6" />
               </Link>
               <Link
                 to="/about"
-                className="flex items-center gap-2 px-6 py-4 border border-dark-800 bg-white/10 backdrop-blur-sm rounded-xl font-bricolage text-sm text-dark-950 hover:bg-white/20 transition-colors duration-200"
+                className="flex items-center gap-2 px-6 py-4 border border-border bg-muted/50 backdrop-blur-sm rounded-xl font-bricolage text-sm text-foreground hover:bg-muted/70 transition-colors duration-200"
               >
                 know us ❤
               </Link>
@@ -80,7 +80,7 @@ const Index = () => {
         {/* Large Image Section */}
         <section className="px-4 mb-20">
           <div className="container mx-auto">
-            <div className="w-full h-96 bg-gray-300 rounded-xl opacity-80 shadow-lg"></div>
+            <div className="w-full h-96 bg-muted rounded-xl opacity-80 shadow-lg border border-border"></div>
           </div>
         </section>
 
@@ -91,10 +91,10 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left Content */}
               <div>
-                <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-dark-950 mb-6">
+                <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
                   Productivity at its best
                 </h2>
-                <p className="font-bricolage text-base text-dark-950 mb-8 leading-relaxed">
+                <p className="font-bricolage text-base text-muted-foreground mb-8 leading-relaxed">
                   We are packed with features that help you stay productive and focused. 
                   Solutions should be tools that help you get things done, not distractions 
                   that keep you from your work.
@@ -123,7 +123,7 @@ const Index = () => {
               
               {/* Right Image */}
               <div className="relative">
-                <div className="w-full h-80 bg-gray-300 rounded-3xl opacity-80 shadow-lg"></div>
+                <div className="w-full h-80 bg-muted rounded-3xl opacity-80 shadow-lg border border-border"></div>
               </div>
             </div>
           </div>
@@ -132,14 +132,14 @@ const Index = () => {
         {/* Sponsors Section */}
         <section className="px-4 mb-20">
           <div className="container mx-auto text-center">
-            <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-dark-950 mb-6">
+            <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Our Sponsors
             </h2>
             <div className="mb-6">
-              <p className="font-bricolage text-base text-dark-950 mb-2">
+              <p className="font-bricolage text-base text-muted-foreground mb-2">
                 We are grateful to our sponsors for their support. They help us to keep the project alive.
               </p>
-              <p className="font-bricolage text-base text-dark-950">
+              <p className="font-bricolage text-base text-muted-foreground">
                 You can also be part of this journey by{' '}
                 <span className="text-orange-500">donating us directly</span>
               </p>
@@ -147,9 +147,9 @@ const Index = () => {
             
             {/* Sponsor Logos */}
             <div className="flex justify-center items-center gap-8 opacity-80">
-              <div className="w-64 h-16 bg-gray-300 rounded"></div>
-              <div className="w-72 h-16 bg-gray-300 rounded"></div>
-              <div className="w-44 h-16 bg-gray-300 rounded"></div>
+              <div className="w-64 h-16 bg-muted rounded border border-border"></div>
+              <div className="w-72 h-16 bg-muted rounded border border-border"></div>
+              <div className="w-44 h-16 bg-muted rounded border border-border"></div>
             </div>
           </div>
         </section>
@@ -158,10 +158,10 @@ const Index = () => {
         <section className="relative px-4 mb-20 overflow-hidden">
           <FloralPattern position="center" size="lg" opacity={0.04} />
           <div className="container mx-auto text-center relative z-10">
-            <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-dark-950 mb-6">
+            <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
               <span>Our</span> <span>Core</span> <span>Values</span>
             </h2>
-            <p className="font-bricolage text-base text-dark-950 mb-8 max-w-2xl mx-auto">
+            <p className="font-bricolage text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
               We make it not only a priority, but a necessity to ensure that dumbpotato 
               always strikes the right balance between beauty, performance, and privacy.
             </p>
@@ -174,29 +174,29 @@ const Index = () => {
             </div>
             
             {/* Large Screenshot */}
-            <div className="w-full h-96 lg:h-[500px] bg-gray-300 rounded-3xl shadow-lg"></div>
+            <div className="w-full h-96 lg:h-[500px] bg-muted rounded-3xl shadow-lg border border-border"></div>
           </div>
         </section>
 
         {/* Footer CTA Section */}
         <section className="relative px-4 pb-20 overflow-hidden">
           {/* Curved Background */}
-          <div className="absolute inset-x-0 bottom-0 h-96 bg-cream-300 rounded-t-[500px] -mx-4"></div>
+          <div className="absolute inset-x-0 bottom-0 h-96 bg-muted rounded-t-[500px] -mx-4"></div>
           <FloralPattern position="bottom-right" size="sm" opacity={0.1} />
 
           <div className="container mx-auto relative z-10">
             <div className="text-left max-w-lg">
-              <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-dark-900 mb-6">
+              <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
                 dumb potato
               </h2>
-              <p className="font-bricolage text-base text-dark-900 mb-8 leading-relaxed">
-                Beautifully designed, privacy-focused, and packed with features. 
+              <p className="font-bricolage text-base text-muted-foreground mb-8 leading-relaxed">
+                Beautifully designed, privacy-focused, and packed with features.
                 We care about your experience, not your data.
               </p>
               
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-6 py-4 bg-dark-900 text-cream-50 font-bricolage text-sm rounded-xl hover:bg-dark-950 transition-colors duration-200 shadow-lg"
+                className="inline-flex items-center gap-3 px-6 py-4 bg-primary text-primary-foreground font-bricolage text-sm rounded-xl hover:bg-primary/80 transition-colors duration-200 shadow-lg"
               >
                 Download
                 <ArrowRight className="w-6 h-6" />
@@ -207,7 +207,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-cream-300 px-4 py-12">
+      <footer className="bg-muted px-4 py-12">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Follow Us */}
