@@ -25,12 +25,12 @@ const Index = () => {
             {/* Main Heading */}
             <div className="mb-8">
               <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none mb-4">
-                <span className="text-foreground">welcome to</span>
+                <span className="text-foreground text-orange-500 italic">moshi moshi</span>
               </h1>
               <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none">
-                <span className="text-foreground">a </span>
-                <span className="text-orange-500 italic">calmer</span>
-                <span className="text-foreground"> internet</span>
+                <span className="text-foreground">we provide solutions </span>
+                <span className="text-orange-500 italic">which helps </span>
+                <span className="text-foreground">people.</span>
               </h1>
             </div>
 
@@ -98,7 +98,6 @@ const Index = () => {
           <FloralPattern position="top-left" size="md" opacity={0.05} />
           <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
-              {/* Left Content */}
               <div>
                 <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
                   Productivity at its best
@@ -109,7 +108,6 @@ const Index = () => {
                   done, not distractions that keep you from your work.
                 </p>
 
-                {/* Feature Cards */}
                 <div className="space-y-4">
                   <FeatureCard
                     title="Workspaces"
@@ -130,7 +128,6 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Right Image */}
               <div className="relative">
                 <div className="w-full h-80  rounded-3xl opacity-80 shadow-lg border border-border"></div>
               </div>
