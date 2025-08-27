@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "../assets/logo.png"
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,8 +24,8 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-full border-2 border-foreground flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full border border-foreground"></div>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img src={logo} />
               </div>
               <span className="font-bricolage text-lg font-bold text-foreground">
                 dumb potato

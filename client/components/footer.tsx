@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import FloralPattern from "./FloralPattern";
+import Lottie from "lottie-react";
+import potatoAnimation from "../assets/Potato.json"
 
 const Footer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -132,12 +134,20 @@ const Footer = () => {
                 </p>
               </div>
             </div>
+
+            <div className=" justify-center flex items-center md:mt-[-84px]">
+              <Lottie
+                animationData={potatoAnimation}
+                loop
+                autoplay
+              />
+            </div>
           </div>
 
           {/* Copyright */}
-          <div className="mt-8 pt-8 border-t border-dark-900/20 text-center">
+          <div className="mt-8 pt-8 border-t border-dark-900/20">
             <p className="font-bricolage text-base text-dark-900">
-              Thought and Implemented by the{" "}
+              &copy; 2025{" "}
               <span className="text-orange-500 font-bold">dumb potato</span>
             </p>
           </div>

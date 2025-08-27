@@ -1,87 +1,64 @@
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
-import FloralPattern from "@/components/FloralPattern";
 import { ArrowRight, Github, Twitter, Star, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/footer";
+import waveAnimation from "../assets/Wave_Animation.json";
+import ottiechargement from "../assets/ottiechargement.json";
+import Lottie from "lottie-react";
 
 const Index = () => {
   return (
     <>
       <SEO
-        title="Dumb Potato - Creative Digital Solutions"
+        title="Dumb Potato - IT Consulatancy"
         description="Beautifully designed, privacy-focused, and packed with features. We care about your experience, not your data."
         keywords="web development, digital solutions, creative agency, UI/UX design, privacy-focused, portfolio"
       />
 
       <Navigation />
 
+      {/* IMPORTANT DEBUGGING STEP: 
+        Inspect this <main> tag and any parent elements in your browser. 
+        If any of them have a class that sets 'overflow: hidden' or 'overflow-x: hidden', 
+        it will break the sticky effect. Remove that class if it exists.
+      */}
       <main className="bg-background min-h-screen">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-          <FloralPattern position="top-right" size="lg" opacity={0.08} />
-          <FloralPattern position="bottom-left" size="md" opacity={0.06} />
+        <section className="relative pt-32 pb-20 px-4">
           <div className="container mx-auto text-center relative z-10">
-            {/* Main Heading */}
+            {/* ... (rest of the hero section is unchanged) ... */}
             <div className="mb-8">
-              <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none mb-4">
-                <span className="text-foreground text-orange-500 italic">moshi moshi</span>
-              </h1>
               <h1 className="font-judson text-6xl md:text-8xl lg:text-9xl leading-none">
                 <span className="text-foreground">we provide solutions </span>
                 <span className="text-orange-500 italic">which helps </span>
                 <span className="text-foreground">people.</span>
               </h1>
             </div>
-
-            {/* Subtitle */}
             <div className="mb-12 space-y-2">
-              <p className="font-bricolage text-base text-muted-foreground max-w-md mx-auto">
-                Beautifully designed, privacy-focused, and packed with features.
+              <p className="font-bricolage text-[28px] text-muted-foreground max-w-md mx-auto">
+                Choose Dumb.
               </p>
-              <p className="font-bricolage text-base text-muted-foreground max-w-md mx-auto">
-                We care about your experience, not your data.
+              <p className="font-bricolage text-[28px] text-muted-foreground max-w-md mx-auto mt-[0!important]">
+                Think Smart.{" "}
               </p>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col gap-4 justify-center items-center mb-12">
               <Link
                 to="/contact"
-                className="flex items-center gap-3 px-8 py-4 bg-secondary rounded-xl font-bricolage text-sm text-secondary-foreground hover: transition-colors duration-200 shadow-lg"
+                className="flex relative items-center gap-3 px-8 py-4 bg-secondary rounded-xl font-bricolage text-sm text-secondary-foreground hover: transition-colors duration-200 shadow-lg"
               >
                 Start Your Journey with us
                 <ArrowRight className="w-6 h-6" />
+                <div className="absolute">
+                  <Lottie
+                    animationData={ottiechargement}
+                    loop
+                    autoplay
+                    className="w-full"
+                  />
+                </div>
               </Link>
-              <Link
-                to="/about"
-                className="flex items-center gap-2 px-6 py-4 border border-border /50 backdrop-blur-sm rounded-xl font-bricolage text-sm text-foreground hover:/70 transition-colors duration-200"
-              >
-                know us ❤
-              </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex justify-center gap-4 opacity-80">
-              <Github className="w-4 h-4 text-muted-foreground" />
-              <Twitter className="w-4 h-4 text-muted-foreground" />
-              {/* Mastodon */}
-              <svg
-                className="w-4 h-4 text-muted-foreground"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-              >
-                <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" />
-              </svg>
-              <Star className="w-4 h-4 text-muted-foreground" />
-              {/* Discord */}
-              <svg
-                className="w-4 h-4 text-muted-foreground"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-              >
-                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
-              </svg>
             </div>
           </div>
         </section>
@@ -89,81 +66,67 @@ const Index = () => {
         {/* Large Image Section */}
         <section className="px-4 mb-20">
           <div className="container mx-auto">
-            <div className="w-full h-96  rounded-xl opacity-80 shadow-lg border border-border"></div>
+            <div className="w-full h-96 rounded-xl border border-border"></div>
           </div>
         </section>
 
-        {/* Productivity Section */}
-        <section className="relative px-4 mb-20 overflow-hidden">
-          <FloralPattern position="top-left" size="md" opacity={0.05} />
-          <div className="container mx-auto relative z-10">
+        {/* --- FINAL CORRECTED PRODUCTIVITY SECTION --- */}
+        <section className="relative px-4 mb-20">
+          <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                  Productivity at its best
+                  Services We Provide
                 </h2>
                 <p className="font-bricolage text-base text-muted-foreground mb-8 leading-relaxed">
-                  We are packed with features that help you stay productive and
-                  focused. Solutions should be tools that help you get things
-                  done, not distractions that keep you from your work.
+                  At dumb potato, we deliver end-to-end digital solutions that
+                  help businesses grow, scale, and stand out online. From
+                  strategy and branding to development and marketing, we turn
+                  ideas into results.
                 </p>
-
                 <div className="space-y-4">
                   <FeatureCard
-                    title="Workspaces"
-                    description="Organize your projects into Workspaces to keep your work separate and organized, and switch between them with ease."
+                    title="IT Consultancy"
+                    description="We guide businesses in adopting the right technologies to solve challenges, improve efficiency, and scale with confidence. Our consultancy bridges strategy and execution."
                   />
                   <FeatureCard
-                    title="Compact Mode"
-                    description="Our Compact Mode gives you more screen real estate by hiding unnecessary elements when you don't need them."
+                    title="Brand Identity & Creation"
+                    description="We craft brand identities that stand out. From logos and visuals to tone and messaging, we create a consistent brand experience that builds trust and recognition."
                   />
                   <FeatureCard
-                    title="Glance"
-                    description="Glance allows you to quickly switch between your most used projects, without having to scroll through your history."
+                    title="UI/UX Design"
+                    description="Intuitive and visually engaging designs that put users first. We combine research, prototyping, and testing to deliver experiences that look great and work seamlessly."
                   />
                   <FeatureCard
-                    title="Split View"
-                    description="Split View allows you to view two projects side by side, making it easier to compare and switch between them."
+                    title="Web & Mobile Development"
+                    description="From websites to mobile apps, we build fast, secure, and user-friendly digital solutions. Every project is responsive, SEO-ready, and optimized for performance."
+                  />
+                  <FeatureCard
+                    title="CRM & ERP Solutions"
+                    description="We implement and customize powerful CRM and ERP platforms like Salesforce and Odoo. Our solutions streamline operations, sales, and customer management."
+                  />
+                  <FeatureCard
+                    title="Digital Marketing"
+                    description="Increase your online visibility with smart digital marketing strategies. From SEO and content to social media and analytics, we help you connect with the right audience."
                   />
                 </div>
               </div>
-
-              <div className="relative">
-                <div className="w-full h-80  rounded-3xl opacity-80 shadow-lg border border-border"></div>
+              <div className="sticky top-24">
+                <Lottie
+                  animationData={waveAnimation}
+                  loop
+                  autoplay
+                  className="w-full h-96 rounded-3xl opacity-80 shadow-lg border border-border"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Sponsors Section */}
-        {/* <section className="px-4 mb-20">
-          <div className="container mx-auto text-center">
-            <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Our Sponsors
-            </h2>
-            <div className="mb-6">
-              <p className="font-bricolage text-base text-muted-foreground mb-2">
-                We are grateful to our sponsors for their support. They help us
-                to keep the project alive.
-              </p>
-              <p className="font-bricolage text-base text-muted-foreground">
-                You can also be part of this journey by{" "}
-                <span className="text-orange-500">donating us directly</span>
-              </p>
-            </div>
-
-            <div className="flex justify-center items-center gap-8 opacity-80">
-              <div className="w-64 h-16  rounded border border-border"></div>
-              <div className="w-72 h-16  rounded border border-border"></div>
-              <div className="w-44 h-16  rounded border border-border"></div>
-            </div>
-          </div>
-        </section> */}
-
         {/* Core Values Section */}
-        <section className="relative px-4 mb-20 overflow-hidden">
-          <FloralPattern position="center" size="lg" opacity={0.04} />
+        <section className="relative px-4 mb-20">
           <div className="container mx-auto text-center relative z-10">
+            {/* ... (rest of the core values section is unchanged) ... */}
             <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
               <span>Our</span> <span>Core</span> <span>Values</span>
             </h2>
@@ -172,8 +135,6 @@ const Index = () => {
               dumbpotato always strikes the right balance between beauty,
               performance, and privacy.
             </p>
-
-            {/* Values */}
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
               <ValueCard
                 icon={<Github className="w-6 h-6" />}
@@ -188,29 +149,18 @@ const Index = () => {
                 text="Private and always up-to-date"
               />
             </div>
-
-            {/* Large Screenshot */}
-            <div className="w-full h-96 lg:h-[500px]  rounded-3xl shadow-lg border border-border"></div>
+            <div className="w-full h-96 lg:h-[500px] rounded-3xl shadow-lg border border-border"></div>
           </div>
         </section>
-
-        {/* Footer CTA Section */}
       </main>
 
-      {/* Footer */}
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
-// Feature Card Component
-const FeatureCard = ({
-  title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => (
+// ... (FeatureCard and ValueCard components remain the same)
+const FeatureCard = ({ title, description }) => (
   <div className="p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-cream-300/30">
     <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-2">
       {title}
@@ -221,8 +171,7 @@ const FeatureCard = ({
   </div>
 );
 
-// Value Card Component
-const ValueCard = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
+const ValueCard = ({ icon, text }) => (
   <div className="flex items-center gap-3 px-6 py-4 bg-white/10 backdrop-blur-sm rounded-xl border border-cream-300/30">
     <div className="text-cream-300">{icon}</div>
     <span className="font-bricolage text-sm text-dark-950">{text}</span>
