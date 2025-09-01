@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import FloralPattern from "@/components/FloralPattern";
 import Footer from "@/components/footer";
+import ScheduleCallButton from "@/components/ScheduleCallButton";
 
 const ContactUs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,9 +42,9 @@ const ContactUs = () => {
       title: "Visit Our Office",
       description: "Come say hello at our office",
       value:
-        "B-414, 11th Floor, Privilion, Isckon Cross-road, Ahmedabad - 380001",
+        "RUDRA SQUARE, I wing, Judges Bunglow Rd, Bodakdev, Ahmedabad, Gujarat 380015",
       action:
-        "https://maps.google.com/?q=B-414,+11th+Floor,+Privilion,+Isckon+Cross-road,+Ahmedabad+-+380001",
+        "https://maps.app.goo.gl/twhgwUcZo3vZQohn7",
     },
   ];
 
@@ -148,11 +149,11 @@ const ContactUs = () => {
                         Location
                       </h3>
                       <p className="font-bricolage text-dark-950">
-                        B-414, 11th Floor, Privilion
+                        I-103, RUDRA SQUARE,
                         <br />
-                        Isckon Cross-road
+                        Judges Bunglow Rd,
                         <br />
-                        Ahmedabad - 380001
+                        Ahmedabad - 380015
                         <br />
                         Gujarat, India
                       </p>
@@ -171,11 +172,11 @@ const ContactUs = () => {
               </div>
 
               {/* Map Placeholder */}
-              <div className="w-full h-96 bg-gray-300 rounded-2xl flex items-center justify-center">
+              {/* <div className="w-full h-96 bg-gray-300 rounded-2xl flex items-center justify-center">
                 <p className="font-bricolage text-dark-950/60">
                   Interactive Map
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -199,37 +200,16 @@ const ContactUs = () => {
           <div className="container mx-auto">
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 p-12 text-center">
               <h2 className="font-bricolage text-3xl font-bold text-dark-950 mb-4">
-                Quick Response Guaranteed
+                Quick Response
               </h2>
               <p className="font-bricolage text-lg text-dark-950 mb-6 max-w-2xl mx-auto">
                 We understand that timing is crucial for your business. That's
                 why we guarantee a response to all inquiries within 24 hours
                 during business days.
               </p>
-              <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+              <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">
-                    &lt; 24h
-                  </div>
-                  <p className="font-bricolage text-sm text-dark-950">
-                    Email Response
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">
-                    &lt; 2h
-                  </div>
-                  <p className="font-bricolage text-sm text-dark-950">
-                    Phone Response
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-500 mb-2">
-                    100%
-                  </div>
-                  <p className="font-bricolage text-sm text-dark-950">
-                    Privacy Protected
-                  </p>
+                  <ScheduleCallButton btnStyle='bg-primary' />
                 </div>
               </div>
             </div>
@@ -238,7 +218,7 @@ const ContactUs = () => {
       </main>
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
 
       {/* Contact Modal */}
       <ContactModal
@@ -258,7 +238,7 @@ const ContactMethodCard = ({ method }: { method: any }) => (
     <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-2">
       {method.title}
     </h3>
-    <p className="font-bricolage text-sm text-dark-950/80 mb-4">
+    <p className="font-bricolage text-sm text-dark-950 mb-4">
       {method.description}
     </p>
     <a

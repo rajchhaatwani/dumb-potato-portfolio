@@ -65,8 +65,8 @@ const AboutUs = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ValueCard
                 icon={<Heart className="w-8 h-8" />}
-                title="Privacy First"
-                description="We prioritize user privacy and data protection in every project we undertake."
+                title="Transparent"
+                description="We believe in open communication throughout every project phase, keeping you informed with clear reporting and honest progress updates."
               />
               <ValueCard
                 icon={<Target className="w-8 h-8" />}
@@ -88,7 +88,7 @@ const AboutUs = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 px-4">
+        {/* <section className="py-20 px-4">
           <div className="container mx-auto">
             <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-12 text-center">
               Meet Our Team
@@ -111,7 +111,7 @@ const AboutUs = () => {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Story Section */}
         <section className="py-20 px-4 ">
@@ -147,7 +147,7 @@ const AboutUs = () => {
       </main>
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -17,13 +17,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-react": "^0.15.1",
+    "@lottiefiles/dotlottie-react": "^0.15.2",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "gsap": "^3.13.0",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.541.0",
+    "react-calendly": "^4.4.0",
     "react-helmet-async": "^2.0.5",
+    "resend": "^6.0.2",
     "zod": "^3.25.76"
   },
   "devDependencies": {

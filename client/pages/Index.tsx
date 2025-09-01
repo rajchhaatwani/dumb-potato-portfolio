@@ -1,11 +1,18 @@
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
-import { ArrowRight, Github, Twitter, Star, Check } from "lucide-react";
+import { ArrowRight, Github, Check } from "lucide-react";
 import { Link } from "react-router-dom";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Lottie from "lottie-react";
+import Stats from "@/components/Stats";
 import Footer from "@/components/footer";
 import waveAnimation from "../assets/Wave_Animation.json";
-import ottiechargement from "../assets/ottiechargement.json";
-import Lottie from "lottie-react";
+import Consultant from "../assets/Consultant.json";
+import brand_identity from "../assets/marketing.json";
+import crm_erp from "../assets/leads_analysis.json";
+import Web_Mobile_Dev from "../assets/Web_Mobile_Dev.json";
+import Synchroma_Branding from "../assets/Synchroma_Branding.json";
+import ServicesSection from "@/components/Service_section";
 
 const Index = () => {
   return (
@@ -17,12 +24,6 @@ const Index = () => {
       />
 
       <Navigation />
-
-      {/* IMPORTANT DEBUGGING STEP: 
-        Inspect this <main> tag and any parent elements in your browser. 
-        If any of them have a class that sets 'overflow: hidden' or 'overflow-x: hidden', 
-        it will break the sticky effect. Remove that class if it exists.
-      */}
       <main className="bg-background min-h-screen">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
@@ -51,11 +52,11 @@ const Index = () => {
                 Start Your Journey with us
                 <ArrowRight className="w-6 h-6" />
                 <div className="absolute">
-                  <Lottie
-                    animationData={ottiechargement}
+                  <DotLottieReact
+                    src="./animations/ottiechargement.lottie"
                     loop
                     autoplay
-                    className="w-full"
+                    className="w-64 h-64"
                   />
                 </div>
               </Link>
@@ -65,68 +66,25 @@ const Index = () => {
 
         {/* Large Image Section */}
         <section className="px-4 mb-20">
-          <div className="container mx-auto">
-            <div className="w-full h-96 rounded-xl border border-border"></div>
-          </div>
-        </section>
-
-        {/* --- FINAL CORRECTED PRODUCTIVITY SECTION --- */}
-        <section className="relative px-4 mb-20">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                  Services We Provide
-                </h2>
-                <p className="font-bricolage text-base text-muted-foreground mb-8 leading-relaxed">
-                  At dumb potato, we deliver end-to-end digital solutions that
-                  help businesses grow, scale, and stand out online. From
-                  strategy and branding to development and marketing, we turn
-                  ideas into results.
-                </p>
-                <div className="space-y-4">
-                  <FeatureCard
-                    title="IT Consultancy"
-                    description="We guide businesses in adopting the right technologies to solve challenges, improve efficiency, and scale with confidence. Our consultancy bridges strategy and execution."
-                  />
-                  <FeatureCard
-                    title="Brand Identity & Creation"
-                    description="We craft brand identities that stand out. From logos and visuals to tone and messaging, we create a consistent brand experience that builds trust and recognition."
-                  />
-                  <FeatureCard
-                    title="UI/UX Design"
-                    description="Intuitive and visually engaging designs that put users first. We combine research, prototyping, and testing to deliver experiences that look great and work seamlessly."
-                  />
-                  <FeatureCard
-                    title="Web & Mobile Development"
-                    description="From websites to mobile apps, we build fast, secure, and user-friendly digital solutions. Every project is responsive, SEO-ready, and optimized for performance."
-                  />
-                  <FeatureCard
-                    title="CRM & ERP Solutions"
-                    description="We implement and customize powerful CRM and ERP platforms like Salesforce and Odoo. Our solutions streamline operations, sales, and customer management."
-                  />
-                  <FeatureCard
-                    title="Digital Marketing"
-                    description="Increase your online visibility with smart digital marketing strategies. From SEO and content to social media and analytics, we help you connect with the right audience."
-                  />
-                </div>
+          <div className="container flex flex-col justify-center items-center">
+            <div className="w-full rounded-2xl border border-white/20 bg-white/10 dark:bg-background/50 backdrop-blur-sm shadow-md p-6 md:p-8">
+              <div className="mb-6 text-center">
+                <h3 className="font-bricolage text-lg md:text-xl text-foreground/80">
+                  Trusted by businesses worldwide
+                </h3>
               </div>
-              <div className="sticky top-24">
-                <Lottie
-                  animationData={waveAnimation}
-                  loop
-                  autoplay
-                  className="w-full h-96 rounded-3xl opacity-80 shadow-lg border border-border"
-                />
+              <div className="text-center">
+                <Stats />
               </div>
             </div>
           </div>
         </section>
 
+        <ServicesSection/>
+        
         {/* Core Values Section */}
-        <section className="relative px-4 mb-20">
+        {/* <section className="relative px-4 mb-20">
           <div className="container mx-auto text-center relative z-10">
-            {/* ... (rest of the core values section is unchanged) ... */}
             <h2 className="font-bricolage text-5xl lg:text-6xl font-bold text-foreground mb-6">
               <span>Our</span> <span>Core</span> <span>Values</span>
             </h2>
@@ -151,25 +109,13 @@ const Index = () => {
             </div>
             <div className="w-full h-96 lg:h-[500px] rounded-3xl shadow-lg border border-border"></div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer />
     </>
   );
 };
-
-// ... (FeatureCard and ValueCard components remain the same)
-const FeatureCard = ({ title, description }) => (
-  <div className="p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-cream-300/30">
-    <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-2">
-      {title}
-    </h3>
-    <p className="font-bricolage text-sm text-dark-950 leading-relaxed">
-      {description}
-    </p>
-  </div>
-);
 
 const ValueCard = ({ icon, text }) => (
   <div className="flex items-center gap-3 px-6 py-4 bg-white/10 backdrop-blur-sm rounded-xl border border-cream-300/30">

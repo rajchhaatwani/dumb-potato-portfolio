@@ -66,11 +66,13 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
       } else {
-        throw new Error("Failed to send message");
+        const errorData = await response.json();
+        console.error("Error response:", errorData);
+        alert(errorData.error || "Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      // You could add error state here
+      alert("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -114,16 +116,16 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         <div className="relative p-8">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="font-bricolage text-2xl font-bold text-dark-950">
+            <h2 className="font-bricolage text-2xl font-bold !text-dark-950">
               Get in Touch
             </h2>
-            <button
+            {/* <button
               onClick={handleClose}
               className="p-2 rounded-lg hover:bg-cream-200/50 transition-colors"
               aria-label="Close modal"
             >
-              <X className="w-5 h-5 text-dark-950" />
-            </button>
+              <X className="w-5 h-5 !text-dark-950" />
+            </button> */}
           </div>
 
           {submitted ? (
@@ -214,7 +216,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     onChange={handleChange}
                     rows={4}
                     className={cn(
-                      "w-full pl-11 pr-4 py-3 bg-white/50 border rounded-xl font-bricolage text-dark-950 placeholder-dark-950/60 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors resize-none",
+                      "w-full pl-11 pr-4 py-3 bg-white/50 border rounded-xl font-bricolage !text-dark-950 placeholder-dark-950/60 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors resize-none",
                       errors.message ? "border-red-500" : "border-cream-300",
                     )}
                     placeholder="Tell us about your project..."

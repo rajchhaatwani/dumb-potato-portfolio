@@ -1,20 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  ArrowRight,
-  Menu,
-  X,
-  Github,
-  Twitter,
-  Star,
-  Check,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+import { ArrowRight, Linkedin, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 import FloralPattern from "./FloralPattern";
 import Lottie from "lottie-react";
-import potatoAnimation from "../assets/Potato.json"
+import potatoAnimation from "../assets/Potato.json";
 
 const Footer = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,10 +20,9 @@ const Footer = () => {
 
   return (
     <>
-      <section className="relative px-4 pb-20 overflow-hidden">
+      <section className="relative px-4 mt-[172px] overflow-hidden">
         {/* Curved Background */}
         {/* <div className="absolute inset-x-0 bottom-0 h-96  rounded-t-[500px] -mx-4"></div> */}
-        <FloralPattern position="bottom-right" size="sm" opacity={0.1} />
 
         <div className="container mx-auto relative z-10">
           <div className="text-left max-w-lg">
@@ -41,17 +30,16 @@ const Footer = () => {
               dumb potato
             </h2>
             <p className="font-bricolage text-base text-muted-foreground mb-8 leading-relaxed">
-              Beautifully designed, privacy-focused, and packed with features.
-              We care about your experience, not your data.
+              Choose Dumb. Think Smart.
             </p>
 
-            <Link
+            {/* <Link
               to="/contact"
               className="inline-flex items-center gap-3 px-6 py-4 bg-primary text-primary-foreground font-bricolage text-sm rounded-xl hover:bg-primary/80 transition-colors duration-200 shadow-lg"
             >
               Contact us
               <ArrowRight className="w-6 h-6" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -64,33 +52,15 @@ const Footer = () => {
                 Follow Us
               </h3>
               <div className="flex gap-4 opacity-80">
-                <Github className="w-4 h-4 text-dark-950" />
-                <Twitter className="w-4 h-4 text-dark-950" />
-                <Linkedin className="w-4 h-4 text-dark-950" />
-                <Instagram className="w-4 h-4 text-dark-950" />
+                <a
+                  href="https://www.linkedin.com/company/dumb-potato/"
+                  target="_blank"
+                >
+                  <Linkedin className="w-4 h-4 text-dark-950" />
+                </a>
+                {/* <Instagram className="w-4 h-4 text-dark-950" /> */}
               </div>
             </div>
-
-            {/* About Us */}
-            {/* <div>
-              <h3 className="font-bricolage text-base font-semibold text-dark-900 mb-4">
-                About Us
-              </h3>
-              <div className="space-y-2 text-dark-900">
-                <Link
-                  to="/about"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Team & Contributors
-                </Link>
-                <a
-                  href="#"
-                  className="block hover:text-orange-500 transition-colors"
-                >
-                  Privacy Policy
-                </a>
-              </div>
-            </div> */}
 
             {/* Know Us */}
             <div>
@@ -98,7 +68,7 @@ const Footer = () => {
                 know us!
               </h3>
               <div className="space-y-2 text-dark-900">
-                <Link
+                {/* <Link
                   to="/our-work"
                   className="block hover:text-orange-500 transition-colors"
                 >
@@ -109,12 +79,18 @@ const Footer = () => {
                   className="block hover:text-orange-500 transition-colors"
                 >
                   Our way to work
-                </Link>
+                </Link> */}
                 <Link
                   to="/services"
                   className="block hover:text-orange-500 transition-colors"
                 >
                   Services
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block hover:text-orange-500 transition-colors"
+                >
+                  Contact us
                 </Link>
               </div>
             </div>
@@ -125,22 +101,21 @@ const Footer = () => {
                 Contact us
               </h3>
               <div className="space-y-2 text-dark-900">
-                <p>info@dumbpotato.com</p>
-                <p>+91-9904538757</p>
+                <a href="mailto:info@dumbpotato.com">info@dumbpotato.com</a>
+                <p>
+                  <a href="tel:+919904538757">+91-9904538757</a>
+                </p>
+
                 <p className="text-sm">
-                  B-414, 11th Floor, Privilion, Isckon Cross-road
+                  103, RUDRA SQUARE, Judges Bunglow Rd,
                   <br />
-                  Ahmedabad - 380001
+                  Bodakdev, Ahmedabad, Gujarat 380015.
                 </p>
               </div>
             </div>
 
             <div className=" justify-center flex items-center md:mt-[-84px]">
-              <Lottie
-                animationData={potatoAnimation}
-                loop
-                autoplay
-              />
+              <Lottie animationData={potatoAnimation} loop autoplay />
             </div>
           </div>
 

@@ -1,9 +1,14 @@
+import ContactModal from "@/components/ContactModal";
 import Footer from "@/components/footer";
 import Navigation from "@/components/Navigation";
+import ScheduleCallButton from "@/components/ScheduleCallButton";
 import SEO from "@/components/SEO";
 import { Code, Palette, Search, Shield, Smartphone, Globe } from "lucide-react";
+import { useState } from "react";
 
 const Services = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const services = [
     {
       icon: <Globe className="w-8 h-8" />,
@@ -16,7 +21,7 @@ const Services = () => {
         "SEO Ready",
         "Accessibility Compliant",
       ],
-      pricing: "Starting from $2,500",
+      // pricing: "Starting from $2,500",
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
@@ -29,7 +34,7 @@ const Services = () => {
         "App Store Optimization",
         "Maintenance & Updates",
       ],
-      pricing: "Starting from $5,000",
+      // pricing: "Starting from $5,000",
     },
     {
       icon: <Palette className="w-8 h-8" />,
@@ -42,7 +47,7 @@ const Services = () => {
         "Visual Design",
         "Usability Testing",
       ],
-      pricing: "Starting from $1,500",
+      // pricing: "Starting from $1,500",
     },
     {
       icon: <Code className="w-8 h-8" />,
@@ -55,7 +60,7 @@ const Services = () => {
         "Order Processing",
         "Analytics & Reporting",
       ],
-      pricing: "Starting from $3,500",
+      // pricing: "Starting from $3,500",
     },
     {
       icon: <Search className="w-8 h-8" />,
@@ -68,20 +73,20 @@ const Services = () => {
         "Social Media Strategy",
         "Analytics & Insights",
       ],
-      pricing: "Starting from $1,000/month",
+      // pricing: "Starting from $1,000/month",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Privacy & Security",
+      title: "CRM & ERP Solutions",
       description:
-        "Comprehensive security audits and privacy-focused solutions to protect your digital assets.",
+        "Tailored CRM and ERP implementations that streamline operations, enhance collaboration, and give you a 360° view of your business.",
       features: [
-        "Security Audits",
-        "GDPR Compliance",
-        "Data Protection",
-        "Privacy by Design",
+        "Custom CRM & ERP Setup",
+        "Workflow Automation",
+        "Third-Party Integrations",
+        "Scalable for Growth",
       ],
-      pricing: "Starting from $2,000",
+      // pricing: "Starting from $3,500",
     },
   ];
 
@@ -170,8 +175,8 @@ const Services = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard
-                title="Privacy First"
-                description="We build with privacy by design, ensuring your users' data is protected and your business complies with privacy regulations."
+                title="End-to-End Expertise"
+                description="From strategy to execution, we handle the entire journey so you don’t need to juggle multiple vendors."
               />
               <FeatureCard
                 title="Quality Focused"
@@ -208,19 +213,25 @@ const Services = () => {
               vision to life. Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-orange-500 text-cream-50 font-bricolage text-base rounded-xl hover:bg-orange-600 transition-colors duration-200 shadow-lg">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-8 py-4 bg-orange-500 text-cream-50 font-bricolage text-base rounded-xl hover:bg-orange-600 transition-colors duration-200 shadow-lg"
+              >
                 Get a Quote
               </button>
-              <button className="px-8 py-4 border border-dark-800 bg-white/10 backdrop-blur-sm text-dark-950 font-bricolage text-base rounded-xl hover:bg-white/20 transition-colors duration-200">
-                Schedule a Call
-              </button>
+
+              <ScheduleCallButton />
             </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
+      <ContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 };
@@ -246,11 +257,11 @@ const ServiceCard = ({ service }: { service: any }) => (
         </li>
       ))}
     </ul>
-    <div className="border-t border-cream-300/30 pt-4">
+    {/* <div className="border-t border-cream-300/30 pt-4">
       <p className="font-bricolage text-orange-500 font-semibold">
         {service.pricing}
       </p>
-    </div>
+    </div> */}
   </div>
 );
 
