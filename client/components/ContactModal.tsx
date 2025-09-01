@@ -71,13 +71,17 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       } else {
         const errorData = await response.json();
         console.error("Error response:", errorData);
-        handleClose();
+        setTimeout(() => {
+          handleClose();
+        }, 1500);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again later.");
     } finally {
-      handleClose();
+      setTimeout(() => {
+          handleClose();
+        }, 1500);
       setIsSubmitting(false);
     }
   };

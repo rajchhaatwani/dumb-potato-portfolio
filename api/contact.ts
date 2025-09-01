@@ -13,13 +13,13 @@ const TO_EMAIL_TEST = process.env.TO_EMAIL_TEST || "raj@dumbpotato.com"; // for 
 const transporter = nodemailer.createTransport({
   host: SMTP_HOST,
   port: SMTP_PORT,
-  secure: SMTP_PORT === 465, // true for port 465, false otherwise
+  secure: SMTP_PORT === 465, // true for SSL, false for TLS
   auth: {
     user: SMTP_USER,
     pass: SMTP_PASS,
   },
 });
- 
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     if (req.method !== 'POST') {
@@ -40,8 +40,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Determine recipient: test vs production
     const toEmail = process.env.NODE_ENV === "development" ? TO_EMAIL_TEST : TO_EMAIL_PROD;
 
-    // Prepare email
-    const mailOptions = {
+    // 1️⃣ Send email to main inbox
+    await transporter.sendMail({
       from: `"${name || "Anonymous"}" <${SMTP_USER}>`,
       to: toEmail,
       subject: `New Contact Form Submission from ${name || "Anonymous"}`,
@@ -52,13 +52,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         <p><strong>Message:</strong></p>
         <p>${message}</p>
       `,
-    };
+    });
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // 2️⃣ Send confirmation email to user
+    await transporter.sendMail({
+      from: `"Dumb Potato" <${SMTP_USER}>`,
+      to: email,
+      subject: "We Received Your Message",
+      html: `
+        <h2>Thank You for Contacting Dumb Potato!</h2>
+        <p>Hi ${name || "there"},</p>
+        <p>We have received your message and will get back to you within 24 hours.</p>
+        <p>Here’s a copy of your message:</p>
+        <blockquote>${message}</blockquote>
+        <p>Best regards,<br/>Dumb Potato Team</p>
+      `,
+    });
 
     // Success response
-    return res.status(200).json({ success: true, message: "Email sent successfully" });
+    return res.status(200).json({ success: true, message: "Emails sent successfully" });
 
   } catch (err: any) {
     console.error("Contact form error:", err);
