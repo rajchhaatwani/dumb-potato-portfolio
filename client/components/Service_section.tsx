@@ -77,25 +77,28 @@ export default function ServicesSection() {
                     </p>
                   </div>
 
-                  {/* Mobile animation block */}
-                  <AnimatePresence>
-                    {activeIndex === index && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.4 }}
-                        className="mt-6 block lg:hidden"
-                      >
-                        <DotLottieReact
-                          src={service.src}
-                          loop
-                          autoplay
-                          className="w-full h-72 rounded-2xl shadow-lg border border-border"
-                        />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Mobile animation block - FIXED */}
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: activeIndex === index ? "auto" : 0,
+                      opacity: activeIndex === index ? 1 : 0,
+                    }}
+                    transition={{
+                      height: { duration: 0.4, ease: "easeInOut" },
+                      opacity: { duration: 0.3, delay: activeIndex === index ? 0.1 : 0 }
+                    }}
+                    className="overflow-hidden block lg:hidden"
+                  >
+                    <div className="mt-6">
+                      <DotLottieReact
+                        src={service.src}
+                        loop
+                        autoplay
+                        className="w-full h-72 rounded-2xl shadow-lg border border-border"
+                      />
+                    </div>
+                  </motion.div>
                 </div>
               ))}
             </div>
