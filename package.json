@@ -23,6 +23,7 @@
     "gsap": "^3.13.0",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.541.0",
+    "nodemailer": "^7.0.6",
     "react-calendly": "^4.4.0",
     "react-helmet-async": "^2.0.5",
     "resend": "^6.0.2",
