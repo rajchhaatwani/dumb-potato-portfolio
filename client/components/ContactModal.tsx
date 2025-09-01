@@ -153,9 +153,9 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
-                <label className="block font-bricolage text-sm font-medium text-dark-950 mb-2">
+                {/* <label className="block font-bricolage text-sm font-medium !text-dark-950 mb-2">
                   Name *
-                </label>
+                </label> */}
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-dark-950/60" />
                   <input
@@ -164,7 +164,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     value={formData.name}
                     onChange={handleChange}
                     className={cn(
-                      "w-full pl-11 pr-4 py-3 bg-white/50 border rounded-xl font-bricolage text-dark-950 placeholder-dark-950/60 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors",
+                      "w-full pl-11 pr-4 py-3 bg-white/50 border rounded-xl font-bricolage !text-dark-950 placeholder-dark-950/60 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors",
                       errors.name ? "border-red-500" : "border-cream-300",
                     )}
                     placeholder="Your name"
@@ -179,18 +179,18 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
               {/* Email Field */}
               <div>
-                <label className="block font-bricolage text-sm font-medium text-dark-950 mb-2">
+                {/* <label className="block font-bricolage text-sm font-medium !text-dark-950 mb-2">
                   Email *
-                </label>
+                </label> */}
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-dark-950/60" />
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 !text-dark-950/60" />
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     className={cn(
-                      "w-full pl-11 pr-4 py-3 bg-white/50 border rounded-xl font-bricolage text-dark-950 placeholder-dark-950/60 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors",
+                      "w-full pl-11 pr-4 py-3 bg-white/50 border rounded-xl font-bricolage !text-dark-950 placeholder-dark-950/60 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors",
                       errors.email ? "border-red-500" : "border-cream-300",
                     )}
                     placeholder="your@email.com"
@@ -205,9 +205,9 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
               {/* Message Field */}
               <div>
-                <label className="block font-bricolage text-sm font-medium text-dark-950 mb-2">
+                {/* <label className="block font-bricolage text-sm font-medium text-dark-950 mb-2">
                   Message *
-                </label>
+                </label> */}
                 <div className="relative">
                   <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-dark-950/60" />
                   <textarea

@@ -45,9 +45,9 @@ const Stats = () => {
     <div className="w-full">
       <ul className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
         <StatItem value={2} label="Years in business" />
-        <StatItem value={5} label="Clients" />
+        <StatItem value={12} label="Clients" />
         <StatItem sign={"%"} value={95} label="Client retention" />
-        <StatItem value={11} label="Projects delivered" />
+        <StatItem value={23} label="Projects delivered" />
       </ul>
     </div>
   );

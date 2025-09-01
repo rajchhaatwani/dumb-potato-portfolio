@@ -3,15 +3,8 @@ import SEO from "@/components/SEO";
 import { ArrowRight, Github, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import Lottie from "lottie-react";
 import Stats from "@/components/Stats";
 import Footer from "@/components/footer";
-import waveAnimation from "../assets/Wave_Animation.json";
-import Consultant from "../assets/Consultant.json";
-import brand_identity from "../assets/marketing.json";
-import crm_erp from "../assets/leads_analysis.json";
-import Web_Mobile_Dev from "../assets/Web_Mobile_Dev.json";
-import Synchroma_Branding from "../assets/Synchroma_Branding.json";
 import ServicesSection from "@/components/Service_section";
 
 const Index = () => {

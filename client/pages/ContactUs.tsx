@@ -42,7 +42,7 @@ const ContactUs = () => {
       title: "Visit Our Office",
       description: "Come say hello at our office",
       value:
-        "RUDRA SQUARE, I wing, Judges Bunglow Rd, Bodakdev, Ahmedabad, Gujarat 380015",
+        "Rudra Square, I wing, Judges Bunglow Rd, Bodakdev, Ahmedabad, Gujarat 380015",
       action:
         "https://maps.app.goo.gl/twhgwUcZo3vZQohn7",
     },
@@ -149,7 +149,7 @@ const ContactUs = () => {
                         Location
                       </h3>
                       <p className="font-bricolage text-dark-950">
-                        I-103, RUDRA SQUARE,
+                        I-103, Rudra Square,
                         <br />
                         Judges Bunglow Rd,
                         <br />
