@@ -28,7 +28,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Test Resend API call
     const result = await resend.emails.send({
       from: "Dumb Potato <onboarding@resend.dev>",
-      to: "info@dumbpotato.com",
+      to: "raj@dumbpotato.com",
       subject: `Test message from ${name || "Anonymous"}`,
       html: `<p>${message}</p>`,
     });

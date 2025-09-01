@@ -65,15 +65,19 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       if (response.ok) {
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => {
+          handleClose();
+        }, 1500);
       } else {
         const errorData = await response.json();
         console.error("Error response:", errorData);
-        alert(errorData.error || "Failed to send message. Please try again.");
+        handleClose();
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Something went wrong. Please try again later.");
     } finally {
+      handleClose();
       setIsSubmitting(false);
     }
   };
@@ -134,10 +138,10 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Send className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-2">
+              <h3 className="font-bricolage text-xl font-bold !text-dark-950 mb-2">
                 Message Sent!
               </h3>
-              <p className="font-bricolage text-dark-950 mb-6">
+              <p className="font-bricolage !text-dark-950 mb-6">
                 Thank you for reaching out. We'll get back to you within 24
                 hours.
               </p>
@@ -249,10 +253,6 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               </button>
             </form>
           )}
-
-          {/* Decorative elements */}
-          <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-orange-200/30 to-orange-300/20 rounded-full blur-xl" />
-          <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-cream-300/40 to-cream-400/30 rounded-full blur-lg" />
         </div>
       </div>
     </div>
