@@ -14,6 +14,7 @@ import OurWork from "./pages/OurWork";
 import Services from "./pages/Services";
 import OurWayToWork from "./pages/OurWayToWork";
 import ContactUs from "./pages/ContactUs";
+import AnalyticsTracker from "./AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <AnalyticsTracker />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutUs />} />
