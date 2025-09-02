@@ -110,9 +110,10 @@ const Services = () => {
                 Our <span className="text-orange-500 italic">Services</span>
               </h1>
               <p className="font-bricolage text-xl text-dark-950 leading-relaxed max-w-3xl mx-auto">
-                We offer comprehensive digital solutions designed to help your
-                business thrive in the digital landscape while maintaining the
-                highest standards of privacy and quality.
+                We provide strategic services designed to optimize performance,
+                streamline operations, and unlock growth potential Our approach
+                drives efficiency, scalability, and measurable outcomes tailored
+                to your business goals
               </p>
             </div>
           </div>
