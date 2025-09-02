@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        md:"768px",
+        md: "768px",
         "2xl": "1400px",
       },
     },
@@ -114,6 +114,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.6s ease-out",
         float: "float 3s ease-in-out infinite",
+        flicker: "flicker 1.5s infinite",
       },
       keyframes: {
         "fade-in": {
@@ -127,6 +128,14 @@ export default {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        flicker: {
+          "0%, 19%, 23%, 25%, 54%, 56%, 100%": {
+            opacity: "1",
+          },
+          "20%, 24%, 55%": {
+            opacity: "0",
+          },
         },
       },
       fontSize: {
