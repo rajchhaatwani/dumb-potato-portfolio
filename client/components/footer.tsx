@@ -107,7 +107,7 @@ const Footer = () => {
                 </p>
 
                 <a className="text-sm" href="https://maps.app.goo.gl/twhgwUcZo3vZQohn7">
-                  103, Rudra Square, Judges Bunglow Rd,
+                  I-103, Rudra Square, Judges Bunglow Rd,
                   <br />
                   Bodakdev, Ahmedabad, Gujarat 380015.
                 </a>
@@ -120,7 +120,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="mt-8 pt-8 border-t border-dark-900/20">
+          <div className="border-t border-dark-900/20">
             <p className="font-bricolage text-base text-dark-900">
               &copy; 2025{" "}
               <span className="text-orange-500 font-bold">dumb potato</span>

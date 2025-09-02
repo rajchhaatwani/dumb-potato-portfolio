@@ -2,7 +2,8 @@ import Footer from "@/components/footer";
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import { Users, Target, Award, Heart } from "lucide-react";
-
+import aboutUs from "../assets/about-us.json"
+import Lottie from "lottie-react";
 const AboutUs = () => {
   return (
     <>
@@ -24,9 +25,11 @@ const AboutUs = () => {
                 About <span className="text-orange-500 italic">Us</span>
               </h1>
               <p className="font-bricolage text-xl text-dark-950 leading-relaxed max-w-3xl mx-auto">
-                We are a passionate team of designers and developers who believe
-                in creating digital experiences that prioritize user privacy,
-                beautiful design, and meaningful functionality.
+                At Dumb Potato, we believe technology doesn’t have to be
+                complicated—it just needs to work smart. We’re a curious bunch
+                of developers, designers, and problem-solvers who love turning
+                complex digital challenges into clean, simple solutions that
+                actually make sense.
               </p>
             </div>
           </div>
@@ -37,21 +40,20 @@ const AboutUs = () => {
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-8">
-                  Our Mission
+                <h2 className="font-bricolage md:text-4xl text-3xl font-bold text-dark-950 mb-8">
+                  Why <span className="text-orange-500">'Dumb potato'</span> ?
                 </h2>
                 <p className="font-bricolage text-lg text-dark-950 leading-relaxed mb-6">
-                  To create a calmer, more thoughtful internet where technology
-                  serves humanity without compromising privacy or overwhelming
-                  users with unnecessary distractions.
-                </p>
-                <p className="font-bricolage text-lg text-dark-950 leading-relaxed">
-                  We believe that digital solutions should enhance productivity
-                  and creativity while respecting user data and promoting
-                  mindful interaction with technology.
+                  At <span className="text-orange-500">Dumb potato</span> we
+                  make sure that technology should never feel overwhelming. Our
+                  focus is on removing complexity, cutting through unnecessary
+                  jargon, and delivering solutions that are practical, reliable,
+                  and built to drive measurable results for your business.
                 </p>
               </div>
-              <div className="w-full h-80 bg-gray-300 rounded-2xl"></div>
+              <div className="w-full rounded-2xl">
+                <Lottie animationData={aboutUs} loop autoplay />
+              </div>
             </div>
           </div>
         </section>
@@ -59,7 +61,7 @@ const AboutUs = () => {
         {/* Values Section */}
         <section className="py-20 px-4 ">
           <div className="container mx-auto">
-            <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-12 text-center">
+            <h2 className="font-bricolage md:text-4xl text-3xl font-bold text-dark-950 mb-12 text-center">
               Our Core Values
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -117,28 +119,27 @@ const AboutUs = () => {
         <section className="py-20 px-4 ">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
-              <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-8 text-center">
-                Our Story
+              <h2 className="font-bricolage md:text-4xl text-3xl font-bold text-dark-950 mb-8 text-center">
+                Our Expertise in Digital Transformation
               </h2>
               <div className="space-y-6 text-lg text-dark-950 leading-relaxed">
                 <p className="font-bricolage">
-                  Dumb Potato was born from a simple observation: the internet
-                  had become too noisy, too intrusive, and too complicated. We
-                  started with a vision to create digital experiences that would
-                  be calmer, more respectful, and more focused on what truly
-                  matters.
+                  At Dumb Potato, we specialize in IT consultancy, custom web
+                  development, digital marketing, and brand identity creation.
+                  Our team helps businesses transform their digital presence
+                  with scalable websites, tailored software solutions, and
+                  data-driven strategies. From planning IT infrastructure to
+                  designing seamless user experiences, we ensure that every
+                  project is built for performance, security, and long-term
+                  growth.
                 </p>
                 <p className="font-bricolage">
-                  Our name, "Dumb Potato," reflects our philosophy of
-                  simplicity. Like a potato, we believe in being grounded,
-                  reliable, and nourishing. The "dumb" part reminds us to keep
-                  things simple and not overthink solutions that should be
-                  elegant and straightforward.
-                </p>
-                <p className="font-bricolage">
-                  Since our founding, we've worked with companies of all sizes,
-                  from startups to established enterprises, helping them create
-                  digital products that their users actually love to use.
+                  We have experience working with startups, SMEs, and
+                  enterprises, we bring a balanced mix of technical expertise,
+                  creative design, and business strategy. Whether you need a
+                  high-performing business website, a custom web application, or
+                  a digital growth strategy, we partner with you to create
+                  solutions that deliver measurable results and lasting impact.
                 </p>
               </div>
             </div>
