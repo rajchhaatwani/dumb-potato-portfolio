@@ -12,7 +12,7 @@
   */
   :root {
     /* Dark matte theme */
-    --background: 0 0% 8%; /* #141414 */
+    --background: 0 0% 0%; /* #141414 */
     --foreground: 48 43% 96%; /* #F2F0E3 */
 
     --card: 0 0% 12%; /* #1F1F1F */
@@ -54,7 +54,7 @@
 
   .dark {
     /* Dark mode with matte dark colors */
-    --background: 0 0% 12%; /* #1F1F1F */
+    --background: 0 0% 0%; /* #1F1F1F */
     --foreground: 48 43% 96%; /* Light cream text */
 
     --card: 0 0% 18%; /* #2E2E2E */

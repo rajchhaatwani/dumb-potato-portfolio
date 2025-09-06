@@ -46,7 +46,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       to: toEmail,
       subject: `New Contact Form Submission from ${name || "Anonymous"}`,
       html: `
-        <h2>New Message from Dumb Potato Website</h2>
+        <h2>New Message from dumb Potato Website</h2>
         <p><strong>Name:</strong> ${name || 'N/A'}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong></p>
@@ -56,16 +56,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // 2️⃣ Send confirmation email to user
     await transporter.sendMail({
-      from: `"Dumb Potato" <${SMTP_USER}>`,
+      from: `"dumb Potato" <${SMTP_USER}>`,
       to: email,
       subject: "We Received Your Message",
       html: `
-        <h2>Thank You for Contacting Dumb Potato!</h2>
+        <h2>Thank You for Contacting dumb Potato!</h2>
         <p>Hi ${name || "there"},</p>
         <p>We have received your message and will get back to you within 24 hours.</p>
         <p>Here’s a copy of your message:</p>
         <blockquote>${message}</blockquote>
-        <p>Best regards,<br/>Dumb Potato Team</p>
+        <p>Best regards,<br/>dumb Potato Team</p>
       `,
     });
 

@@ -49,7 +49,7 @@ const Footer = () => {
               </span>{" "}
             </h2>
             <p className="font-bricolage text-base text-muted-foreground mb-8 leading-relaxed">
-              Choose Dumb. Think Smart.
+              Choose dumb. Think Smart.
             </p>
 
             {/* <Link

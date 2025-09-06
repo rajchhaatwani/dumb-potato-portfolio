@@ -8,8 +8,8 @@ const AboutUs = () => {
   return (
     <>
       <SEO
-        title="About Us - Dumb Potato"
-        description="Learn about Dumb Potato's mission, vision, and the passionate team behind our creative digital solutions. We're committed to building beautiful, privacy-focused experiences."
+        title="About Us - dumb Potato"
+        description="Learn about dumb Potato's mission, vision, and the passionate team behind our creative digital solutions. We're committed to building beautiful, privacy-focused experiences."
         keywords="about us, team, mission, vision, creative agency, web development team, digital solutions"
         url="https://dumbpotato.com/about"
       />
@@ -45,7 +45,7 @@ const AboutUs = () => {
                 </span>
               </h1>
               <p className="font-bricolage text-xl text-dark-950 leading-relaxed max-w-3xl mx-auto">
-                At Dumb Potato, we believe technology doesn’t have to be
+                At dumb Potato, we believe technology doesn’t have to be
                 complicated—it just needs to work smart. We’re a curious bunch
                 of developers, designers, and problem-solvers who love turning
                 complex digital challenges into clean, simple solutions that
@@ -63,7 +63,7 @@ const AboutUs = () => {
                 <h2 className="font-bricolage md:text-4xl text-3xl font-bold text-dark-950 mb-8">
                   Why{" "}
                   <span className="text-orange-500  inline-block relative ">
-                    'Dumb potato'{" "}
+                    'dumb potato'{" "}
                     <svg
                       width="240"
                       height="11"
@@ -84,7 +84,7 @@ const AboutUs = () => {
                   ?
                 </h2>
                 <p className="font-bricolage text-lg text-dark-950 leading-relaxed mb-6">
-                  At <span className="text-orange-500">Dumb potato</span> we
+                  At <span className="text-orange-500">dumb potato</span> we
                   make sure that technology should never feel overwhelming. Our
                   focus is on removing complexity, cutting through unnecessary
                   jargon, and delivering solutions that are practical, reliable,
@@ -164,7 +164,7 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-6 text-lg text-dark-950 leading-relaxed">
                 <p className="font-bricolage">
-                  At Dumb Potato, we specialize in IT consultancy, custom web
+                  At dumb Potato, we specialize in IT consultancy, custom web
                   development, digital marketing, and brand identity creation.
                   Our team helps businesses transform their digital presence
                   with scalable websites, tailored software solutions, and

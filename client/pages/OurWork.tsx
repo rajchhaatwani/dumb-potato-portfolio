@@ -96,7 +96,7 @@ const OurWork = () => {
   return (
     <>
       <SEO
-        title="Our Work - Dumb Potato Portfolio"
+        title="Our Work - dumb Potato Portfolio"
         description="Explore our portfolio of beautiful, privacy-focused digital solutions. From e-commerce platforms to wellness apps, see how we create meaningful digital experiences."
         keywords="portfolio, web development projects, digital solutions, case studies, client work, creative projects"
         url="https://dumbpotato.com/our-work"

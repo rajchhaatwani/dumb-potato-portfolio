@@ -10,16 +10,16 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "Dumb Potato - Creative Digital Solutions",
+  title = "dumb Potato - Creative Digital Solutions",
   description = "Beautifully designed, privacy-focused digital solutions. We create innovative websites and applications that prioritize user experience and data privacy.",
   keywords = "web development, digital solutions, creative agency, UI/UX design, privacy-focused, portfolio",
   image = "/og-image.jpg",
   url = "https://dumbpotato.com",
   type = "website",
 }: SEOProps) => {
-  const fullTitle = title.includes("Dumb Potato")
+  const fullTitle = title.includes("dumb Potato")
     ? title
-    : `${title} | Dumb Potato`;
+    : `${title} | dumb Potato`;
 
   return (
     <Helmet>
@@ -27,7 +27,7 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Dumb Potato" />
+      <meta name="author" content="dumb Potato" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
@@ -39,7 +39,7 @@ const SEO = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Dumb Potato" />
+      <meta property="og:site_name" content="dumb Potato" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card Meta Tags */}
@@ -59,7 +59,7 @@ const SEO = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Dumb Potato",
+          name: "dumb Potato",
           description: description,
           url: url,
           logo: `${url}/logo.png`,
