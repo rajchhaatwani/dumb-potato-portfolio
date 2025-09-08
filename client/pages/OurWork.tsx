@@ -148,7 +148,7 @@ const OurWork = () => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="px-6 py-3 font-bricolage text-sm rounded-full border border-cream-300 bg-white/20 backdrop-blur-sm hover:bg-orange-500 hover:text-cream-50 hover:border-orange-500 transition-all duration-200"
+                  className="px-6 py-3 font-bricolage text-sm rounded-full border border-cream-300 bg-white/10 backdrop-blur-sm hover:bg-orange-500 hover:text-cream-50 hover:border-orange-500 transition-all duration-200"
                 >
                   {category}
                 </button>
@@ -177,7 +177,7 @@ const OurWork = () => {
               <span className="text-orange-500 animate-flicker">tive Pro</span>
               cess
             </h3>
-            <div className="w-full rounded-2xl border border-white/20 bg-white/20  backdrop-blur-sm shadow-md p-6 md:p-8">
+            <div className="w-full rounded-2xl border border-white/20 bg-white/10  backdrop-blur-sm shadow-md p-6 md:p-8">
               <div className="mb-6 text-center"></div>
               <div className="flex justify-center items-center">
                 <Lottie
@@ -226,7 +226,7 @@ const OurWork = () => {
 
 // Project Card Component
 const ProjectCard = ({ project }: { project: any }) => (
-  <div className="group bg-white/20 backdrop-blur-sm rounded-2xl overflow-hidden border border-cream-300/30 hover:shadow-xl transition-all duration-300">
+  <div className="group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-cream-300/30 hover:shadow-xl transition-all duration-300">
     <div className="aspect-video bg-gray-300 relative overflow-hidden">
       {/* <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-dark-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
         <ExternalLink className="w-8 h-8 text-white" />

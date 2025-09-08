@@ -2,22 +2,10 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import SEO from "@/components/SEO";
 import ContactModal from "@/components/ContactModal";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Send,
-  MessageCircle,
-  Github,
-  Twitter,
-  Star,
-  Link,
-  ArrowRight,
-} from "lucide-react";
-import FloralPattern from "@/components/FloralPattern";
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import Footer from "@/components/footer";
 import ScheduleCallButton from "@/components/ScheduleCallButton";
+import { logEvent, trackEvent } from "@/lib/analytics";
 
 const ContactUs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,8 +31,7 @@ const ContactUs = () => {
       description: "Come say hello at our office",
       value:
         "I-103, Rudra Square, I wing, Judges Bunglow Rd, Bodakdev, Ahmedabad, Gujarat 380015",
-      action:
-        "https://maps.app.goo.gl/twhgwUcZo3vZQohn7",
+      action: "https://maps.app.goo.gl/twhgwUcZo3vZQohn7",
     },
   ];
 
@@ -96,7 +83,13 @@ const ContactUs = () => {
                 something beautiful and meaningful.
               </p>
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  trackEvent("contact_cta_click", {
+                    section: "hero",
+                    label: "Start a Conversation",
+                  });
+                  setIsModalOpen(true);
+                }}
                 className="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 text-cream-50 font-bricolage text-base rounded-xl hover:bg-orange-600 transition-colors duration-200 shadow-lg"
               >
                 <Send className="w-5 h-5" />
@@ -162,7 +155,10 @@ const ContactUs = () => {
                 </div>
                 <div className="mt-8">
                   <button
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => {
+                      logEvent("quick_message_click", "cta", "Quick Message Button");
+                      setIsModalOpen(true);
+                    }}
                     className="flex items-center gap-2 px-6 py-3 border border-orange-500 text-orange-500 font-bricolage text-base rounded-xl hover:bg-orange-500 hover:text-cream-50 transition-colors duration-200"
                   >
                     <MessageCircle className="w-5 h-5" />
@@ -198,7 +194,7 @@ const ContactUs = () => {
         {/* Response Time */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 p-12 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30 p-12 text-center">
               <h2 className="font-bricolage text-3xl font-bold text-dark-950 mb-4">
                 Quick Response
               </h2>
@@ -209,7 +205,7 @@ const ContactUs = () => {
               </p>
               <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <ScheduleCallButton btnStyle='bg-primary' />
+                  <ScheduleCallButton btnStyle="bg-primary" />
                 </div>
               </div>
             </div>
@@ -231,7 +227,7 @@ const ContactUs = () => {
 
 // Contact Method Card Component
 const ContactMethodCard = ({ method }: { method: any }) => (
-  <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 text-center hover:shadow-xl transition-all duration-300">
+  <div className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30 text-center hover:shadow-xl transition-all duration-300">
     <div className="text-orange-500 mb-4 flex justify-center">
       {method.icon}
     </div>
@@ -245,6 +241,12 @@ const ContactMethodCard = ({ method }: { method: any }) => (
       href={method.action}
       target={method.action.startsWith("http") ? "_blank" : "_self"}
       rel={method.action.startsWith("http") ? "noopener noreferrer" : ""}
+      onClick={() =>
+        trackEvent("contact_method_click", {
+          method: method.title,
+          value: method.value,
+        })
+      }
       className="font-bricolage text-dark-950 hover:text-orange-500 transition-colors font-medium"
     >
       {method.value}
@@ -257,9 +259,12 @@ const FAQItem = ({ faq }: { faq: any }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 overflow-hidden">
+    <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30 overflow-hidden">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          setIsOpen(!isOpen);
+          trackEvent("faq_toggle", { question: faq.question, opened: !isOpen });
+        }}
         className="w-full p-6 text-left flex justify-between items-center hover:bg-white/10 transition-colors"
       >
         <h3 className="font-bricolage text-lg font-semibold text-dark-950 pr-4">

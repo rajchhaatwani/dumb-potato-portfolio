@@ -288,7 +288,7 @@ const OurWayToWork = () => {
 
 // Principle Card Component
 const PrincipleCard = ({ principle }: { principle: any }) => (
-  <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
+  <div className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30">
     <div className="text-orange-500 mb-6">{principle.icon}</div>
     <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">
       {principle.title}
@@ -308,7 +308,7 @@ const MethodologyPhase = ({ phase, index }: { phase: any; index: number }) => (
       </div>
     </div>
     <div className="flex-grow">
-      <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
+      <div className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
           <h3 className="font-bricolage text-2xl font-bold text-dark-950">
             {phase.phase}
@@ -353,7 +353,7 @@ const MethodologyPhase = ({ phase, index }: { phase: any; index: number }) => (
 
 // Tool Category Component
 const ToolCategory = ({ title, tools }: { title: string; tools: string[] }) => (
-  <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
+  <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30">
     <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-4">
       {title}
     </h3>
@@ -394,7 +394,7 @@ const CommunicationMethod = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
+  <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30">
     <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">
       {title}
     </h3>

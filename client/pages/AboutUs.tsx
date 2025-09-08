@@ -203,7 +203,7 @@ const ValueCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 text-center">
+  <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30 text-center">
     <div className="text-orange-500 mb-4 flex justify-center">{icon}</div>
     <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">
       {title}

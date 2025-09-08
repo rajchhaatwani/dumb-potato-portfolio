@@ -124,15 +124,15 @@ const Footer = () => {
                 <p>
                   <a href="tel:+919904538757">+91-9904538757</a>
                 </p>
-
+                  <p>
                 <a
                   className="text-sm"
-                  href="https://maps.app.goo.gl/twhgwUcZo3vZQohn7"
+                  // href="https://maps.app.goo.gl/twhgwUcZo3vZQohn7"
                 >
                   I-103, Rudra Square, Judges Bunglow Rd,
                   <br />
                   Bodakdev, Ahmedabad, Gujarat 380015.
-                </a>
+                </a></p>
               </div>
             </div>
 

@@ -65,7 +65,7 @@ export default function ServicesSection() {
                   {/* Card */}
                   <div
                     className={`p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-cream-300/30 cursor-pointer transition-all ${
-                      activeIndex === index ? "bg-white/20 border-white/40" : ""
+                      activeIndex === index ? "bg-white/10 border-white/40" : ""
                     }`}
                     onClick={() => setActiveIndex(index)}
                   >

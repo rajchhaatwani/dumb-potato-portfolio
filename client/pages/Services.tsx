@@ -3,8 +3,10 @@ import Footer from "@/components/footer";
 import Navigation from "@/components/Navigation";
 import ScheduleCallButton from "@/components/ScheduleCallButton";
 import SEO from "@/components/SEO";
+import { logEvent } from "@/lib/analytics";
 import { Code, Palette, Search, Shield, Smartphone, Globe } from "lucide-react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -234,7 +236,14 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  setIsModalOpen(true);
+                  logEvent(
+                    "get_a_quote_click",
+                    "cta",
+                    "Get a Quote",
+                  );
+                }}
                 className="px-8 py-4 bg-orange-500 text-cream-50 font-bricolage text-base rounded-xl hover:bg-orange-600 transition-colors duration-200 shadow-lg"
               >
                 Get a Quote
@@ -258,7 +267,7 @@ const Services = () => {
 
 // Service Card Component
 const ServiceCard = ({ service }: { service: any }) => (
-  <div className="p-8 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30 hover:shadow-xl transition-all duration-300">
+  <div className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30 hover:shadow-xl transition-all duration-300">
     <div className="text-orange-500 mb-6">{service.icon}</div>
     <h3 className="font-bricolage text-2xl font-bold text-dark-950 mb-4">
       {service.title}
@@ -320,7 +329,7 @@ const FeatureCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-6 bg-white/20 backdrop-blur-sm rounded-2xl border border-cream-300/30">
+  <div className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-cream-300/30">
     <h3 className="font-bricolage text-xl font-bold text-dark-950 mb-3">
       {title}
     </h3>
