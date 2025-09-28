@@ -136,12 +136,10 @@ const Index = () => {
         </div>
 
         {/* Footer tracking */}
-        <div
-          onMouseEnter={() => logEvent("section_view", "Homepage", "Footer")}
-        >
-          <Footer />
-        </div>
       </main>
+      <div onMouseEnter={() => logEvent("section_view", "Homepage", "Footer")}>
+        <Footer />
+      </div>
     </>
   );
 };

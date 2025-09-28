@@ -71,7 +71,7 @@ const SEO = ({
           },
           address: {
             "@type": "PostalAddress",
-            streetAddress: "B-414, 11th Floor, Privilion, Isckon Cross-road",
+            streetAddress: "I-103, Rudra Square, Judges Bunglow Rd, Bodakdev",
             addressLocality: "Ahmedabad",
             postalCode: "380001",
             addressCountry: "IN",

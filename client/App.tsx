@@ -15,6 +15,8 @@ import Services from "./pages/Services";
 import OurWayToWork from "./pages/OurWayToWork";
 import ContactUs from "./pages/ContactUs";
 import AnalyticsTracker from "./AnalyticsTracker";
+import BlogIndex from "./pages/BlogIndex";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             {/* <Route path="/our-way-to-work" element={<OurWayToWork />} /> */}
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
