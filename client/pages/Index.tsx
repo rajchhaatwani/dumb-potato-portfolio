@@ -13,7 +13,7 @@ const Index = () => {
     <>
       <SEO
         title="dumb Potato - IT Consulatancy"
-        description="Beautifully designed, privacy-focused, and packed with features. We care about your experience, not your data."
+        description="dumbpotato.com is a cutting-edge digital agency specializing in modern web development, AI-powered solutions, Shopify solutions, and high-performance e-commerce strategies. We help businesses scale with SEO-driven design, devops, cloud infrastructures and future-ready digital experiences."
         keywords="web development, digital solutions, creative agency, UI/UX design, privacy-focused, portfolio"
       />
 
