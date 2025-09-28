@@ -63,12 +63,12 @@ const BlogIndex: React.FC = () => {
             <Breadcrumbs
               items={[{ label: "Home", href: "/" }, { label: "Blog" }]}
             />
-            <div className="grid lg:grid-cols-3 gap-10 items-center mt-6">
-              <div className="lg:col-span-2">
+            <div className="gap-10 items-center mt-6">
+              <div>
                 <h1 className="font-bricolage text-4xl md:text-6xl font-bold">
                   Insights for growing digitally
                 </h1>
-                <p className="mt-3 text-muted-foreground max-w-2xl">
+                <p className="mt-3 text-muted-foreground">
                   Case studies and guides on IT solutions, brand identity, ERP/CRM,
                   web & app development, Shopify/woo-commerce/e-commerce, AI automation, DevOps and
                   more.
