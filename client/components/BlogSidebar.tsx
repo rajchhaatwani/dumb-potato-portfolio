@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { CATEGORIES } from "@/lib/blogs/registry";
-import { CITIES } from "@/lib/blogs/cities";
-import { getAllPosts } from "@/lib/blogs/registry";
+import { CATEGORIES } from "@/lib/blog/registry";
+import { getAllPosts } from "@/lib/blog/registry";
 
 const subscribe = async (email: string) => {
   const res = await fetch("/api/newsletter", {
