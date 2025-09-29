@@ -51,7 +51,7 @@ const BlogIndex: React.FC = () => {
         description={`Expert IT consultancy, e-commerce, and AI insights. Read actionable guides, case studies, and technology trends.`}
         keywords={`IT consultancy, e-commerce, Shopify, web development, AI automation services`}
         type="blog"
-        url={`https://dumbpotato.com/blog`}
+        url={`https://dumbpotato.com/blogs`}
       />
 
       <Navigation />
@@ -161,7 +161,7 @@ const BlogIndex: React.FC = () => {
           "@context": "https://schema.org",
           "@type": "Blog",
           name: "dumb potato Blog",
-          url: "https://dumbpotato.com/blog",
+          url: "https://dumbpotato.com/blogs",
           description:
             "Expert insights on IT consultancy, web development, e-commerce, Shopify, and AI in India.",
         })}

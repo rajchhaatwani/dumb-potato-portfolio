@@ -39,15 +39,15 @@ const BlogPost: React.FC = () => {
       <main className="px-4 pt-32 pb-20">
         <div className="container mx-auto">
           <p>Post not found.</p>
-          <Link to="/blog" className="text-orange-500">
-            Back to blog
+          <Link to="/blogs" className="text-orange-500">
+            Back to blogs
           </Link>
         </div>
       </main>
     );
   }
 
-  const url = `https://dumbpotato.com/blog/${post.slug}`;
+  const url = `https://dumbpotato.com/blogs/${post.slug}`;
 
   const blogPostingLd = {
     "@context": "https://schema.org",
@@ -87,7 +87,7 @@ const BlogPost: React.FC = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://dumbpotato.com/blog",
+        item: "https://dumbpotato.com/blogs",
       },
       { "@type": "ListItem", position: 3, name: post.title, item: url },
     ],
@@ -112,7 +112,7 @@ const BlogPost: React.FC = () => {
             <Breadcrumbs
               items={[
                 { label: "Home", href: "/" },
-                { label: "Blog", href: "/blog" },
+                { label: "Blog", href: "/blogs" },
                 { label: post.title },
               ]}
             />
@@ -166,7 +166,7 @@ const BlogPost: React.FC = () => {
                       <li key={r.slug}>
                         <Link
                           className="hover:text-orange-500"
-                          to={`/blog/${r.slug}`}
+                          to={`/blogs/${r.slug}`}
                         >
                           {r.title}
                         </Link>

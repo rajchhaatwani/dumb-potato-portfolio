@@ -41,7 +41,7 @@ const BlogSearch: React.FC = () => {
             {results.map((r) => (
               <li key={r.slug}>
                 <button
-                  onClick={() => nav(`/blog/${r.slug}`)}
+                  onClick={() => nav(`/blogs/${r.slug}`)}
                   className="w-full text-left px-4 py-3 hover:bg-white/5 transition-colors"
                 >
                   <div className="text-sm">{r.title}</div>

@@ -1,6 +1,6 @@
 import { CITIES, PRIMARY_CITY } from "./cities";
 import { PostRecord, SearchIndexItem } from "./types";
-import ModernWebDev2025Content from "@/content/blog/modern-web-dev-2025";
+import ModernWebDev2025Content from "@/content/blogs/modern-web-dev-2025";
 
 // const author = {
 //   name: "dumb potato Editorial Team",

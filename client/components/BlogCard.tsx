@@ -5,7 +5,7 @@ import { PostRecord } from "@/lib/blog/types";
 const BlogCard = ({ post }: { post: PostRecord }) => {
   return (
     <article className="group bg-white/5 border border-border rounded-xl overflow-hidden hover:bg-white/10 transition-colors">
-      <Link to={`/blog/${post.slug}`} className="block">
+      <Link to={`/blogs/${post.slug}`} className="block">
         {post.featuredImage && (
           <div className="aspect-[16/9] bg-muted overflow-hidden">
             <img

@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { CATEGORIES } from "@/lib/blog/registry";
-import { CITIES } from "@/lib/blog/cities";
-import { getAllPosts } from "@/lib/blog/registry";
+import { CATEGORIES } from "@/lib/blogs/registry";
+import { CITIES } from "@/lib/blogs/cities";
+import { getAllPosts } from "@/lib/blogs/registry";
 
 const subscribe = async (email: string) => {
   const res = await fetch("/api/newsletter", {
@@ -44,7 +44,7 @@ const BlogSidebar: React.FC = () => {
         <ul className="space-y-3">
           {recent.map((p) => (
             <li key={p.slug}>
-              <Link className="hover:text-orange-500" to={`/blog/${p.slug}`}>
+              <Link className="hover:text-orange-500" to={`/blogs/${p.slug}`}>
                 {p.title}
               </Link>
             </li>
@@ -97,7 +97,7 @@ const BlogSidebar: React.FC = () => {
             <li key={city}>
               <Link
                 className="hover:text-orange-500"
-                to={`/blog?city=${encodeURIComponent(city)}`}
+                to={`/blogs?city=${encodeURIComponent(city)}`}
               >
                 IT Consultancy in {city}
               </Link>

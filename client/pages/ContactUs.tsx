@@ -274,8 +274,8 @@ const FAQItem = ({ faq }: { faq: any }) => {
           className={`transform transition-transform ${isOpen ? "rotate-45" : "rotate-0"}`}
         >
           <div className="w-6 h-6 flex items-center justify-center">
-            <div className="w-4 h-0.5 bg-dark-950 absolute"></div>
-            <div className="w-0.5 h-4 bg-dark-950 absolute"></div>
+            <div className="w-4 h-0.5 bg-white absolute"></div>
+            <div className="w-0.5 h-4 bg-white absolute"></div>
           </div>
         </div>
       </button>
