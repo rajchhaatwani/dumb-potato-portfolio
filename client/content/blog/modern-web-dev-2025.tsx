@@ -1,6 +1,4 @@
 import React from "react";
-import Navigation from "@/components/Navigation";
-import SEO from "@/components/SEO";
 
 export const ModernWebDev2025Content: React.FC = () => {
   return (
