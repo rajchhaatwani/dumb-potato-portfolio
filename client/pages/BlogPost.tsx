@@ -65,7 +65,7 @@ const BlogPost: React.FC = () => {
     mainEntityOfPage: url,
     publisher: {
       "@type": "Organization",
-      name: "Dumb Potato",
+      name: "dumb potato",
       logo: {
         "@type": "ImageObject",
         url: "https://dumbpotato.com/logo.png",
@@ -96,7 +96,7 @@ const BlogPost: React.FC = () => {
   return (
     <>
       <SEO
-        title={`${post.title} | Dumb Potato`}
+        title={`${post.title} | dumb potato`}
         description={post.description}
         keywords={[post.category, ...post.tags].join(", ")}
         type="article"

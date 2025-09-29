@@ -3,7 +3,7 @@ import { PostRecord, SearchIndexItem } from "./types";
 import ModernWebDev2025Content from "@/content/blog/modern-web-dev-2025";
 
 // const author = {
-//   name: "Dumb Potato Editorial Team",
+//   name: "dumb potato Editorial Team",
 //   title: "IT Consultancy & Web Engineering",
 //   bio: "Expert team specializing in IT consultancy, brand identity, e-commerce, and AI-powered development across India.",
 //   avatarUrl: "/images/logo.png",

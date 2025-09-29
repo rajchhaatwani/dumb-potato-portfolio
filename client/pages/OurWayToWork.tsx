@@ -115,7 +115,7 @@ const OurWayToWork = () => {
   return (
     <>
       <SEO
-        title="Our Way to Work - dumb Potato Methodology"
+        title="Our Way to Work - dumb potato Methodology"
         description="Discover our human-centered, privacy-first approach to digital development. Learn about our collaborative methodology and principles that guide every project."
         keywords="methodology, work process, agile development, user-centered design, privacy-first development, collaborative approach"
         url="https://dumbpotato.com/our-way-to-work"

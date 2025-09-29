@@ -47,7 +47,7 @@ const BlogIndex: React.FC = () => {
   return (
     <>
       <SEO
-        title={`IT Consultancy Blog | Expert Insights | Dumb Potato`}
+        title={`IT Consultancy Blog | Expert Insights | dumb potato`}
         description={`Expert IT consultancy, e-commerce, and AI insights. Read actionable guides, case studies, and technology trends.`}
         keywords={`IT consultancy, e-commerce, Shopify, web development, AI automation services`}
         type="blog"
@@ -160,7 +160,7 @@ const BlogIndex: React.FC = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: "Dumb Potato Blog",
+          name: "dumb potato Blog",
           url: "https://dumbpotato.com/blog",
           description:
             "Expert insights on IT consultancy, web development, e-commerce, Shopify, and AI in India.",
@@ -170,7 +170,7 @@ const BlogIndex: React.FC = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "Dumb Potato",
+          name: "dumb potato",
           address: {
             "@type": "PostalAddress",
             addressLocality: currentCity,

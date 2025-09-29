@@ -61,8 +61,8 @@ const ContactUs = () => {
   return (
     <>
       <SEO
-        title="Contact Us - Get in Touch with dumb Potato"
-        description="Ready to start your project? Contact dumb Potato for creative digital solutions. Get a free consultation and quote for your web development needs."
+        title="Contact Us - Get in Touch with dumb potato"
+        description="Ready to start your project? Contact dumb potato for creative digital solutions. Get a free consultation and quote for your web development needs."
         keywords="contact, get quote, consultation, web development inquiry, project discussion, contact form"
         url="https://dumbpotato.com/contact"
       />

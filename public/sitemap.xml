@@ -4,22 +4,36 @@
   <url>
     <loc>https://www.dumbpotato.com/</loc>
     <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.dumbpotato.com/about</loc>
     <lastmod>2025-09-02</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.dumbpotato.com/services</loc>
     <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.dumbpotato.com/blogs</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.dumbpotato.com/blogs/modern-web-dev-ecommerce-shopify-ai-2025</loc>
+    <lastmod>2025-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>

@@ -95,7 +95,7 @@ const Services = () => {
   return (
     <>
       <SEO
-        title="Services - dumb Potato Digital Solutions"
+        title="Services - dumb potato Digital Solutions"
         description="Comprehensive digital services including web development, mobile apps, UI/UX design, e-commerce solutions, and privacy-focused development. Get a quote today."
         keywords="web development, mobile app development, UI UX design, e-commerce, digital marketing, privacy security, development services"
         url="https://dumbpotato.com/services"
@@ -193,7 +193,7 @@ const Services = () => {
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <h2 className="font-bricolage text-4xl font-bold text-dark-950 mb-12 text-center">
-              Why Choose dumb Potato?
+              Why Choose dumb potato?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard

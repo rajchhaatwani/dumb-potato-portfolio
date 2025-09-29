@@ -10,16 +10,16 @@ interface SEOProps {
 }
 
 const SEO = ({
-  title = "dumb Potato - Creative Digital Solutions",
-  description = "Beautifully designed, privacy-focused digital solutions. We create innovative websites and applications that prioritize user experience and data privacy.",
-  keywords = "web development, digital solutions, creative agency, UI/UX design, privacy-focused, portfolio",
-  image = "/og-image.jpg",
+  title = "dumb potato - Creative Digital Solutions",
+  description = "dumbpotato.com is a cutting-edge digital agency specializing in modern web development, AI-powered solutions, Shopify solutions, and high-performance e-commerce strategies. We help businesses scale with SEO-driven design, devops, cloud infrastructures and future-ready digital experiences.",
+  keywords = "web development, digital solutions, creative agency, UI/UX design, AWS, Google Cloud, Brand identity",
+  image = "/d.png",
   url = "https://dumbpotato.com",
   type = "website",
 }: SEOProps) => {
-  const fullTitle = title.includes("dumb Potato")
+  const fullTitle = title.includes("dumb potato")
     ? title
-    : `${title} | dumb Potato`;
+    : `${title} | dumb potato`;
 
   return (
     <Helmet>
@@ -27,7 +27,7 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="dumb Potato" />
+      <meta name="author" content="dumb potato" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
@@ -39,7 +39,7 @@ const SEO = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="dumb Potato" />
+      <meta property="og:site_name" content="dumb potato" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card Meta Tags */}
@@ -59,7 +59,7 @@ const SEO = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "dumb Potato",
+          name: "dumb potato",
           description: description,
           url: url,
           logo: `${url}/logo.png`,
